@@ -142,7 +142,7 @@ const Body = () => {
             })}
           >
             <div>
-              <img src={"emailimage.svg"} />
+              <img src={"emailimage.png"} />
             </div>
           </div>
           <div
