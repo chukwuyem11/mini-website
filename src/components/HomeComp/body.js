@@ -142,7 +142,9 @@ const Body = () => {
             })}
           >
             <div>
-              <img src={"emailimage.png"} />
+              <img css={mq({
+                width: 500
+              })} src={"emailimage.png"} />
             </div>
           </div>
           <div
