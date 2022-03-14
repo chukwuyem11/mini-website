@@ -1,9 +1,36 @@
+@font-face {
+  font-family: "Tisa Sans Pro";
+  src: url("../assets/font/TisaSansPro-Light.ttf");
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Tisa Sans Pro";
+
+  src: url("../assets/font/TisaSansPro-Regular.ttf");
+
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Tisa Sans Pro";
+
+  src: url("../assets/font/TisaSansPro-Bold.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Tisa Sans Pro";
+
+  src: url("../assets/font/TisaSansPro-Medium.ttf");
+  font-weight: 600;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Tisa Sans Pro";
 }
 
 a {
