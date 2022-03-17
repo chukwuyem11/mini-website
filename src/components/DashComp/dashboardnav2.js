@@ -7,7 +7,7 @@ const query = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
-const DashboardNav = (props) => {
+const DashboardNav2 = (props) => {
     const router = useRouter();
     return (
         <div css={mq({
@@ -56,34 +56,34 @@ const DashboardNav = (props) => {
                     </div>
                     <div> 
                    
-                    <img src={"svg/downwardarrow.svg"} />
+                    <img src={"/svg/downwardarrow.svg"} />
                   </div>
                     </div></div>
                     <div css={mq({
                          display: "flex",
                         alignItems: "center",
                         backgroundColor: router.pathname == "/dashboard" ?  "#6d61df" : "",
-                        padding: 15,
                         cursor: "pointer",
+                        padding: 15,
                         marginTop: 10,
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard")}><div> <img src={"svg/home.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard")}><div> <img src={"/svg/home.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
-                    })}>Home</div></div>
+                    })} >Home</div></div>
                      <div css={mq({
                          display: "flex",
                         alignItems: "center",
                         backgroundColor: router.pathname == "/dashboard/design" ? "#6d61df" : "",
-                        padding: 15,
                         cursor: "pointer",
+                        padding: 15,
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/design")}><div> <img src={"svg/design.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/design")}><div> <img src={"/svg/design.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -92,12 +92,12 @@ const DashboardNav = (props) => {
                          display: "flex",
                         alignItems: "center",
                         backgroundColor: router.pathname == "/dashboard/details" ? "#6d61df" : "",
-                        padding: 15,
                         cursor: "pointer",
+                        padding: 15,
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/details")}><div> <img src={"svg/details.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/details")}><div> <img src={"/svg/details.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -106,12 +106,12 @@ const DashboardNav = (props) => {
                          display: "flex",
                         alignItems: "center",
                         backgroundColor: router.pathname == "/dashboard/colors" ? "#6d61df" : "",
-                        padding: 15,
                         cursor: "pointer",
+                        padding: 15,
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/colors")}><div > <img src={"svg/colors.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/colors")}><div> <img src={"/svg/colors.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -120,12 +120,12 @@ const DashboardNav = (props) => {
                          display: "flex",
                         alignItems: "center",
                         backgroundColor: router.pathname == "/dashboard/socialmedia" ? "#6d61df" : "",
-                        padding: 15,
                         cursor: "pointer",
+                        padding: 15,
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/socialmedia")}><div> <img src={"svg/socialmedia.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/socialmedia")}><div> <img src={"/svg/socialmedia.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -134,12 +134,12 @@ const DashboardNav = (props) => {
                          display: "flex",
                         alignItems: "center",
                         backgroundColor: router.pathname == "/dashboard/emails" ? "#6d61df" : "",
-                        padding: 15,
                         cursor: "pointer",
+                        padding: 15,
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/emails")}><div> <img src={"svg/emails.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/emails")}><div> <img src={"/svg/emails.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -147,13 +147,13 @@ const DashboardNav = (props) => {
                       <div css={mq({
                          display: "flex",
                         alignItems: "center",
+                        cursor: "pointer",
                         backgroundColor: router.pathname == "/dashboard/nameservers" ? "#6d61df" : "",
                         padding: 15,
-                        cursor: "pointer",
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/nameservers")}><div> <img src={"svg/nameservers.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/nameservers")}><div> <img src={"/svg/nameservers.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -167,7 +167,7 @@ const DashboardNav = (props) => {
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/fbverification")}><div> <img src={"svg/FBveri.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/fbverification")}><div> <img src={"/svg/FBveri.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -181,7 +181,7 @@ const DashboardNav = (props) => {
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/links")}><div> <img src={"svg/links.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/links")}><div> <img src={"/svg/links.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -195,7 +195,7 @@ const DashboardNav = (props) => {
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/paymentsinfo")}><div> <img src={"svg/payments.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/paymentsinfo")}><div> <img src={"/svg/payments.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -209,7 +209,7 @@ const DashboardNav = (props) => {
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/upgrade")}><div> <img src={"svg/upgrade.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/upgrade")}><div> <img src={"/svg/upgrade.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -222,7 +222,7 @@ const DashboardNav = (props) => {
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })}><div> <img src={"svg/help.svg"} /></div> <div css={mq({
+                    })}><div> <img src={"/svg/help.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -236,7 +236,7 @@ const DashboardNav = (props) => {
                         ":hover": {
                             backgroundColor: "#6d61df",
                         }
-                    })} onClick={() => router.push("/dashboard/settings")}><div> <img src={"svg/settings.svg"} /></div> <div css={mq({
+                    })} onClick={() => router.push("/dashboard/settings")}><div> <img src={"/svg/settings.svg"} /></div> <div css={mq({
                         fontSize: 16,
                         color: "#fff",
                         marginLeft: 10
@@ -251,4 +251,4 @@ const DashboardNav = (props) => {
     )
 }
 
-export default DashboardNav
+export default DashboardNav2
