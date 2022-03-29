@@ -907,7 +907,7 @@ const Body = () => {
           display: ["none", "block","block","block"]
         })}
       >
-        >
+        
         <div
           css={mq({
             position: "absolute",
@@ -1614,7 +1614,7 @@ const Body = () => {
           display: ["none", "block","block","block"]
         })}
       >
-        >
+        
         <div
           css={mq({
             position: "absolute",
