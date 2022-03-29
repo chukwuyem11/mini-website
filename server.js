@@ -6,6 +6,8 @@ const port = process.env.PORT || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
+const NextAuth = require("next-auth").default;
+const Providers = require('next-auth/providers').default;
 
 app.prepare().then(() => {
   const mainServer = express()
