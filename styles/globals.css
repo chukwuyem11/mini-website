@@ -31,6 +31,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Tisa Sans Pro";
+  /* -webkit-user-select: none;  
+  -moz-user-select: none;     
+  -ms-user-select: none;      
+  user-select: none; */
 }
 
 a {
