@@ -9,6 +9,7 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const Upgrade = () => {
 const services = [
     {
+      id: 1,
         name: "Email Accounts",
         number: 5,
         Amount: 8900,
@@ -17,6 +18,7 @@ const services = [
         icon: "carbonupgrade"
     },
     {
+      id: 2,
         name: "Email Accounts",
         number: 100,
         Amount: 8900,
@@ -25,6 +27,7 @@ const services = [
         icon: "carbonupgrade"
     },
     {
+      id: 3,
         name: "Domain Links",
         number: 100,
         Amount: 8900,
@@ -33,6 +36,7 @@ const services = [
         icon: "carbonupgrade"
     },
     {
+      id: 4,
         name: "Email Storage",
         number: "2GB",
         Amount: 8900,
@@ -41,7 +45,7 @@ const services = [
         icon: "carbonupgrade"
     },
     {
-       
+      id: 5,
         name: "Email Storage",
         number: "10GB",
         Amount: 8900,
@@ -50,6 +54,7 @@ const services = [
         icon: "carbonupgrade"
     },
     {
+      id: 6,
         name: "Email Storage",
         number: "50GB",
         Amount: 8900,
@@ -58,6 +63,7 @@ const services = [
         icon: "carbonupgrade"
     },
     {
+      id: 7,
         name: "Full Ecommerce Website",
         number: 5,
         Amount: 8900,
@@ -227,7 +233,7 @@ const services = [
    
   </tr></thead>
 
-  {services.map((service) => (<tbody>
+  {services.map((service) => (<tbody key={service.id}>
   <tr>
   <td css={mq({
         paddingTop: 20,
@@ -391,7 +397,7 @@ fontWeight: "bold",
 
               
     
-              {services.map((service) => (<div css={mq({
+              {services.map((service) => (<div key={service.id} css={mq({
                  
                  
               })}>
