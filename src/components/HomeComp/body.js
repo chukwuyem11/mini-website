@@ -21,13 +21,13 @@ const Body = () => {
             position: "relative",
           })}
         >
-          >
+          
           <div
             css={mq({
               position: "absolute",
               left: "50%",
               right: "50%",
-              top: 0,
+              bottom: -15,
             })}
           >
             <Lineone />
@@ -40,14 +40,14 @@ const Body = () => {
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
-            marginTop: 150,
+            marginTop: [160,150,150,150],
           })}
         >
           <div
             css={mq({
               textAlign: "center",
               fontWeight: "bold",
-              fontSize: 45,
+              fontSize: [35,45,45,45],
             })}
           >
             {" "}
@@ -76,14 +76,14 @@ const Body = () => {
           >
             <div
               css={mq({
-                width: "40vw",
+                width: ["80vw","40vw","40vw","40vw"],
                 marginTop: 20,
               })}
             >
               <div
                 css={mq({
                   textAlign: "center",
-                  fontSize: 25,
+                  fontSize: [22,25,25,25],
                 })}
               >
                 Bye to long and tiring website links or name. Use your business
@@ -103,9 +103,28 @@ const Body = () => {
         </div>
       </div>
       <div>
+      <div
+          css={mq({
+            position: "relative",
+            display: ["block","none","none","none"]
+          })}
+        >
+          
+          <div
+            css={mq({
+              position: "absolute",
+              left: "50%",
+              right: "50%",
+              top: 0,
+            })}
+          >
+            <Lineone />
+          </div>
+        </div>
         <div
           css={mq({
             position: "relative",
+            display: ["none","block","block","block"]
           })}
         >
           >
@@ -132,13 +151,16 @@ const Body = () => {
         <div
           css={mq({
             display: "flex",
+            flexDirection: ["column","row","row","row"],
+            marginTop: [50,0,0,0],
             justifyContent: "space-between",
             width: "80vw",
           })}
         >
           <div
             css={mq({
-              flex: "50%",
+              flex: ["100%","50%","50%","50%"],
+              display: ["none","block","block","block"]
             })}
           >
             <div>
@@ -149,14 +171,14 @@ const Body = () => {
           </div>
           <div
             css={mq({
-              flex: "50%",
+              flex: ["100%","50%","50%","50%"],
             })}
           >
             <div
               css={mq({
                 textAlign: "left",
                 fontWeight: "bold",
-                fontSize: 40,
+                fontSize: [30,40,40,40],
               })}
             >
               Build trust with{" "}
@@ -172,7 +194,7 @@ const Body = () => {
             <div
               css={mq({
                 marginTop: 20,
-                fontSize: 25,
+                fontSize: [22,25,25,25],
               })}
             >
               Build trust with your audience & customers by getting a
@@ -199,7 +221,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: 22,
+                      fontSize: [20,22,22,22],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -221,7 +243,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: 22,
+                      fontSize: [20,22,22,22],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -244,7 +266,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: 22,
+                      fontSize: [22,25,25,25],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -267,7 +289,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: 22,
+                      fontSize: [22,25,25,25],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -280,7 +302,7 @@ const Body = () => {
             <div>
               <div
                 css={mq({
-                  fontSize: 22,
+                  fontSize: [22,25,25,25],
                   fontWeight: "bold",
                   color: "#3531D4",
                   textDecoration: "underline",
@@ -296,9 +318,10 @@ const Body = () => {
       <div
         css={mq({
           position: "relative",
+          display: ["none", "block","block","block"]
         })}
       >
-        >
+        
         <div
           css={mq({
             position: "absolute",
@@ -310,9 +333,291 @@ const Body = () => {
           <img src={"svg/linethree.svg"} />
         </div>
       </div>
+
+      <div
+          css={mq({
+            position: "relative",
+            display: ["block", "none","none","none"]
+          })}
+        >
+          
+          <div
+            css={mq({
+              position: "absolute",
+              left: "50%",
+              right: "50%",
+              top: 0,
+            })}
+          >
+            <Lineone />
+          </div>
+        </div>
+
+      <div css={mq({
+        marginTop: 170,
+        backgroundColor: "#fafafa",
+        // borderRadius: "40% 40% 0px 0px",
+        display: ["block","none","none","none"],
+        paddingLeft: 20,
+        paddingRight: 20
+      })}><div css={mq({
+        marginTop: 50,
+        display: "flex",
+        justifyContent: "center"
+      })}><div
+      css={mq({
+        textAlign: "center",
+      
+        fontSize: 30,
+        fontWeight: "bold",
+        marginTop: 35,
+      })}
+    >
+      Personalize your various URLs with{" "}
+      <span
+        css={mq({
+          color: "#3531D4",
+        })}
+      >
+        {" "}
+        domain links.{" "}
+      </span>
+    </div></div>
+    
+        <div css={mq({
+       marginTop: 40,
+        display: "flex",
+        justifyContent: "space-between",
+       
+      })}>
+
+      <div css={mq({
+       paddingBottom:5,
+       paddingTop: 5,
+       paddingRight: 10,
+       paddingLeft: 10,
+        border: "solid",
+        borderWidth: 1,
+        borderColor: tab == "a" ? "#fff" :"#c4c4c4",
+        borderRadius: 50,
+        fontSize: 16,
+        backgroundColor: tab == "a" ? "#3531D4" : "",
+        color: tab == "a" ? "#fff" : ""
+      })}  onClick={() => setTab("a")}>Personalise your stores</div>
+      <div css={mq({
+        paddingBottom:5,
+        paddingTop: 5,
+        paddingRight: 10,
+        paddingLeft: 10,
+        border: "solid",
+        borderWidth: 1,
+        borderColor: tab == "b" ? "#fff" :"#c4c4c4",
+        borderRadius: 50,
+        fontSize: 16,
+        backgroundColor: tab == "b" ? "#3531D4" : "",
+        color: tab == "b" ? "#fff" : ""
+      })}  onClick={() => setTab("b")}>Shorten Links</div>
+      <div css={mq({
+        paddingBottom:5,
+        paddingTop: 5,
+        paddingRight: 10,
+        paddingLeft: 10,
+        border: "solid",
+        borderWidth: 1,
+        borderColor: tab == "c" ? "#fff" :"#c4c4c4",
+        borderRadius: 50,
+        fontSize: 16,
+        backgroundColor: tab == "c" ? "#3531D4" : "",
+        color: tab == "c" ? "#fff" : ""
+      })}  onClick={() => setTab("c")}>Social Media Handles</div>
+
+      </div>
+      <div
+            css={mq({
+              
+            })}   
+              >
+                <div>
+                  <div
+                    css={mq({
+                      display: "flex",
+                      
+                      marginTop: 20,
+                      display: tab == "a" ? "block" : "none",
+                    })}
+                  >
+                    
+                    <div
+                      
+                    >
+                      <div
+                        css={mq({
+                          fontWeight: "bold",
+                          fontSize: 22,
+                          color: tab == "a" ? "#000" : "#969393",
+                        })}
+                        onClick={() => setTab("a")}
+                      >
+                        
+                        Personalize your eCommerce store link to 
+                        your domain name
+                      </div>
+                      <div
+                        css={mq({
+                          fontSize: 16,
+                          marginTop: 10,
+                          display: tab == "a" ? "block" : "none",
+                        })}
+                      >
+                        Turn your Paystack shop or online store to your domains
+                        links easily.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    css={mq({
+                      display: "flex",
+                      marginTop: 20,
+                      display: tab == "b" ? "block" : "none",
+                    })}
+                  >
+                   
+                    <div
+                     
+                    >
+                      <div
+                        css={mq({
+                          fontWeight: "bold",
+                          fontSize: 22,
+                          color: tab == "b" ? "#000" : "#969393",
+                        })}
+                        onClick={() => setTab("b")}
+                      >
+                        {" "}
+                        Shorten lengthy WhatsApp links to yourdomain.com/chat
+                      </div>
+                      <div
+                        css={mq({
+                          fontSize: 16,
+                          marginTop: 10,
+                          display: tab == "b" ? "block" : "none",
+                        })}
+                      >
+                        Let your clients eaily reach you - make your Telegram,
+                        WhatsApp links shorter.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    css={mq({
+                      display: "flex",
+                      marginTop: 20,
+                      display: tab == "c" ? "block" : "none",
+                    })}
+                  >
+                   
+                    <div
+                     
+                    >
+                      <div
+                        css={mq({
+                          fontWeight: "bold",
+                          fontSize: 22,
+                          color: tab == "c" ? "#000" : "#969393",
+                        })}
+                        onClick={() => setTab("c")}
+                      >
+                        {" "}
+                        Make your social media handles more memorable.
+                      </div>
+                      <div
+                        css={mq({
+                          fontSize: 16,
+                          marginTop: 10,
+                          display: tab == "c" ? "block" : "none",
+                        })}
+                      >
+                        Make it easier to share your social media handles. Turn
+                        them to domain links.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                css={mq({
+                  flex: "50%",
+                })}
+              >
+                <div
+                  css={mq({
+                    display: tab == "a" ? "block" : "none",
+                  })}
+                >
+                  <div css={mq({
+                    display: "flex",
+                    justifyContent: "right",
+                    marginTop: 20
+
+                  })}>
+                  <img
+                    css={mq({
+                      width: 400,
+                     
+                      
+                    })}
+                    src={"pics/ecomm.png"}
+                  /></div>
+                </div>
+                <div
+                  css={mq({
+                    display: tab == "b" ? "block" : "none",
+                   
+                  })}
+                >
+                   <div css={mq({
+                    display: "flex",
+                    justifyContent: "right",
+                    marginTop: 10
+                  
+                  })}>
+                  <img
+                    css={mq({
+                      width: 400,
+                     
+                    })}
+                    src={"pics/whatsapp.png"}
+                  /></div>
+                </div>
+                <div
+                  css={mq({
+                    display: tab == "c" ? "block" : "none",
+                  })}
+                >
+                   <div css={mq({
+                    display: "flex",
+                    justifyContent: "right",
+                    marginTop: 10
+
+                  })}>
+                  <img
+                    css={mq({
+                      width: 400,
+                     
+                    })}
+                    src={"pics/socialmedia.png"}
+                  /></div>
+                </div>
+              </div>
+
+      
+    </div>
+
+
       <div
         css={mq({
-          display: "flex",
+          display: ["none","flex","flex","flex"],
           justifyContent: "center",
         })}
       >
@@ -541,6 +846,7 @@ const Body = () => {
                   <img
                     css={mq({
                       width: 550,
+                      marginBottom: -15
                       
                     })}
                     src={"pics/ecomm.png"}
@@ -553,7 +859,8 @@ const Body = () => {
                 >
                   <img
                     css={mq({
-                      width: 500,
+                      width: 550,
+                      marginBottom: -15
                     })}
                     src={"pics/whatsapp.png"}
                   />
@@ -565,7 +872,8 @@ const Body = () => {
                 >
                   <img
                     css={mq({
-                      width: 500,
+                      width: 550,
+                      marginBottom: -15
                     })}
                     src={"pics/socialmedia.png"}
                   />
@@ -576,8 +884,27 @@ const Body = () => {
         </div>
       </div>
       <div
+          css={mq({
+            position: "relative",
+            display: ["block", "none","none","none"]
+          })}
+        >
+          
+          <div
+            css={mq({
+              position: "absolute",
+              left: "50%",
+              right: "50%",
+              top: 0,
+            })}
+          >
+            <Lineone />
+          </div>
+        </div>
+      <div
         css={mq({
           position: "relative",
+          display: ["none", "block","block","block"]
         })}
       >
         >
@@ -594,11 +921,12 @@ const Body = () => {
       </div>
       <div
         css={mq({
-          marginTop: 140,
+          marginTop: [170,140,140,140],
           backgroundColor: "#1f1b39",
-          height: 700,
+          height: ["",700,700,700],
           display: "flex",
-          justifyContent: "center",
+          justifyContent: ["left","center","center","center"],
+          padding:["0px 20px",0,0,0],
           alignItems: "center",
         })}
       >
@@ -616,28 +944,38 @@ const Body = () => {
             <div
               css={mq({
                 flex: "30%",
+                display: ["none","block","block","block"],
               })}
             >
               <img
                 css={mq({
+                position: "relative",
                   height: 800,
-                  marginLeft: -50,
+                  top: 110,
+                  left: -30,
+                  // marginLeft: -50,
                   display: tab1 == "a" ? "block" : "none",
                 })}
                 src={"pics/linker.png"}
               />
               <img
                 css={mq({
+             
+                  position: "relative",
                   height: 800,
-                  marginLeft: -50,
+                  top: 110,
+                  left: -30,
                   display: tab1 == "b" ? "block" : "none",
                 })}
                 src={"pics/profiler.png"}
               />
               <img
                 css={mq({
+                 
+                  position: "relative",
                   height: 800,
-                  marginLeft: -50,
+                  top: 110,
+                  left: -30,
                   display: tab1 == "c" ? "block" : "none",
                 })}
                 src={"pics/postee.png"}
@@ -645,25 +983,26 @@ const Body = () => {
             </div>
             <div
               css={mq({
-                flex: "70%",
+                flex: ["100%","70%","70%","70%"],
               })}
             >
               <div
                 css={mq({
-                  marginTop: 80,
-                  paddingLeft: 25,
-                  paddingRight: 50,
+                  marginTop: [40,180,180,180],
+                  paddingLeft: [0,25,25,25],
+                  paddingRight: [0,50,50,50],
                 })}
               >
                 <div
                   css={mq({
-                    fontSize: 40,
+                    fontSize: [30,40,40,40],
                     fontWeight: "bold",
                     color: "#fff",
                   })}
                 >
                   Choose preferred templates.
                 </div>
+                
                 <div
                   css={mq({
                     display: "flex",
@@ -680,24 +1019,26 @@ const Body = () => {
                       css={mq({
                         display: "flex",
                         justifyContent: "space-between",
+
                       })}
                     >
                       <div
                         css={mq({
                           display: "flex",
+                          alignItems: "center"
                         })}
                         onClick={() => setTab1("a")}
                       >
                         <div>
                           {tab1 == "a" ? (
-                            <img src={"svg/fullcircle.svg"} />
+                            <img css={mq({width: [20,25,25,25]})} src={"svg/fullcircle.svg"} />
                           ) : (
-                            <img src={"svg/emptycircle.svg"} />
+                            <img css={mq({width: [20,25,25,25]})} src={"svg/emptycircle.svg"} />
                           )}
                         </div>
                         <div
                           css={mq({
-                            fontSize: 20,
+                            fontSize: [15,20,20,20],
                             fontWeight: 600,
                             color: "#fff",
                             marginLeft: 10,
@@ -710,19 +1051,20 @@ const Body = () => {
                       <div
                         css={mq({
                           display: "flex",
+                          alignItems: "center"
                         })}
                         onClick={() => setTab1("b")}
                       >
                         <div>
                           {tab1 == "b" ? (
-                            <img src={"svg/fullcircle.svg"} />
+                            <img css={mq({width: [20,25,25,25]})} src={"svg/fullcircle.svg"} />
                           ) : (
-                            <img src={"svg/emptycircle.svg"} />
+                            <img css={mq({width: [20,25,25,25]})} src={"svg/emptycircle.svg"} />
                           )}
                         </div>
                         <div
                           css={mq({
-                            fontSize: 20,
+                            fontSize: [15,20,20,20],
                             fontWeight: 600,
                             color: "#fff",
                             marginLeft: 10,
@@ -735,19 +1077,20 @@ const Body = () => {
                       <div
                         css={mq({
                           display: "flex",
+                          alignItems: "center"
                         })}
                         onClick={() => setTab1("c")}
                       >
                         <div>
                           {tab1 == "c" ? (
-                            <img src={"svg/fullcircle.svg"} />
+                            <img css={mq({width: [20,25,25,25]})} src={"svg/fullcircle.svg"} />
                           ) : (
-                            <img src={"svg/emptycircle.svg"} />
+                            <img css={mq({width: [20,25,25,25]})} src={"svg/emptycircle.svg"} />
                           )}
                         </div>
                         <div
                           css={mq({
-                            fontSize: 20,
+                            fontSize: [15,20,20,20],
                             fontWeight: 600,
                             color: "#fff",
                             marginLeft: 10,
@@ -762,6 +1105,7 @@ const Body = () => {
                   <div
                     css={mq({
                       flex: "10%",
+                      display: ["none","block","block","block"]
                     })}
                   ></div>
                   <div
@@ -773,11 +1117,12 @@ const Body = () => {
                     <div
                       css={mq({
                         display: "flex",
+                        alignItems: "center"
                       })}
                     >
                       <div
                         css={mq({
-                          fontSize: 20,
+                          fontSize: [15,20,20,20],
                           fontWeight: 600,
                           color: "#fff",
                           marginRight: 10,
@@ -787,25 +1132,80 @@ const Body = () => {
                         SEE MORE
                       </div>
                       <div>
-                        <img src={"svg/arrow.svg"} />
+                        <img css={mq({width: [20,25,25,25]})} src={"svg/arrow.svg"} />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  css={mq({
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginTop: 25,
-                  })}
-                >
-                  <div
+              css={mq({
+                display: ["block","none","none","none"],
+                marginTop: 30
+              })}
+            >
+              <div css={mq({
+                display: "flex",
+                justifyContent: "center"
+              })}>
+<img
+                css={mq({
+                  width: 300,
+                  // marginLeft: -50,
+                  display: tab1 == "a" ? "block" : "none",
+                })}
+                src={"pics/linker.png"}
+              />
+              </div>
+              <div css={mq({
+                display: "flex",
+                justifyContent: "center"
+              })}>
+              <img
+                css={mq({
+             
+                  width: 300,
+                  display: tab1 == "b" ? "block" : "none",
+                })}
+                src={"pics/profiler.png"}
+              /></div>
+
+<div css={mq({
+                display: "flex",
+                justifyContent: "center"
+              })}>
+              <img
+                css={mq({
+                 
+                 
+                  width: 300,
+                  
+                  display: tab1 == "c" ? "block" : "none",
+                })}
+                src={"pics/postee.png"}
+              /></div>
+            </div>
+                <div css={mq({
+                      marginTop: 20,
+                      marginBottom: [50,0,0,0],
+                      display: "grid",
+                     
+                      
+                      width: [450,700,700,700],
+  height: [800,700,700,700],
+                      gridTemplateColumns: ["1fr 1fr","1fr 1fr  1fr","1fr 1fr  1fr","1fr 1fr  1fr"],
+    gridTemplateRows: [" 1fr 1fr","1fr 1fr  1fr","1fr 1fr  1fr","1fr 1fr  1fr"],
+                      // justifyContent: "space-between",
+                      columnGap: [20,20,20,20],
+    rowGap: [20,20,20,20],
+    
+                  })}>
+ <div
                     css={mq({
                       backgroundColor: "#161328",
                       borderRadius: 10,
                       padding: 20,
-                      width: 250,
-                      marginRight: 20,
+                     
+                      
                     })}
                   >
                     <div>
@@ -838,8 +1238,7 @@ const Body = () => {
                       backgroundColor: "#161328",
                       borderRadius: 10,
                       padding: 20,
-                      width: 250,
-                      marginRight: 20,
+                      
                     })}
                   >
                     <div>
@@ -872,7 +1271,7 @@ const Body = () => {
                       backgroundColor: "#161328",
                       borderRadius: 10,
                       padding: 20,
-                      width: 250,
+                   
                     })}
                   >
                     <div>
@@ -900,22 +1299,12 @@ const Body = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-
-                <div
-                  css={mq({
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginTop: 20,
-                  })}
-                >
                   <div
                     css={mq({
                       backgroundColor: "#161328",
                       borderRadius: 10,
                       padding: 20,
-                      width: 250,
-                      marginRight: 20,
+                     
                     })}
                   >
                     <div>
@@ -948,8 +1337,7 @@ const Body = () => {
                       backgroundColor: "#161328",
                       borderRadius: 10,
                       padding: 20,
-                      width: 250,
-                      marginRight: 20,
+                      
                     })}
                   >
                     <div>
@@ -982,7 +1370,8 @@ const Body = () => {
                       backgroundColor: "#161328",
                       borderRadius: 10,
                       padding: 20,
-                      width: 250,
+                   
+                      
                     })}
                   >
                     <div>
@@ -1010,18 +1399,39 @@ const Body = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+
+                  </div>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
+      <div
+          css={mq({
+            position: "relative",
+            display: ["block", "none","none","none"]
+          })}
+        >
+          
+          <div
+            css={mq({
+              position: "absolute",
+              left: "50%",
+              right: "50%",
+              top: 0,
+            })}
+          >
+            <Lineone />
+          </div>
+        </div>
       <div
         css={mq({
           position: "relative",
+          display: ["none", "block","block","block"]
         })}
       >
-        >
+        
         <div
           css={mq({
             position: "absolute",
@@ -1045,13 +1455,15 @@ const Body = () => {
             css={mq({
               display: "flex",
               justifyContent: "space-between",
-              width: "80%",
+              flexDirection: ["column-reverse", "row","row","row"],
+              padding: ["0px 20px",0,0,0],
+              width: ["100%","80%","80%","80%"],
             })}
           >
             <div>
               <div
                 css={mq({
-                  fontSize: 40,
+                  fontSize: [30,40,40,40],
                   fontWeight: "bold",
                 })}
               >
@@ -1068,7 +1480,7 @@ const Body = () => {
               </div>
               <div
                 css={mq({
-                  fontSize: 25,
+                  fontSize: [22,25,25,25],
                   fontWeight: 400,
                 })}
               >
@@ -1082,12 +1494,13 @@ const Body = () => {
                   css={mq({
                     display: "flex",
                     alignItems: "center",
+
                   })}
                 >
-                  <img src={"svg/box.svg"} />{" "}
+                  <img css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: 30,
+                      fontSize: [25,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1102,10 +1515,10 @@ const Body = () => {
                     marginTop: 20,
                   })}
                 >
-                  <img src={"svg/box.svg"} />{" "}
+                  <img  css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: 30,
+                      fontSize: [25,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1120,10 +1533,10 @@ const Body = () => {
                     marginTop: 20,
                   })}
                 >
-                  <img src={"svg/box.svg"} />{" "}
+                  <img  css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: 30,
+                      fontSize: [25,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1136,12 +1549,13 @@ const Body = () => {
                     display: "flex",
                     alignItems: "center",
                     marginTop: 20,
+                  
                   })}
                 >
-                  <img src={"svg/box.svg"} />{" "}
+                  <img  css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: 30,
+                      fontSize: [25,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1152,7 +1566,7 @@ const Body = () => {
               </div>
               <div
                 css={mq({
-                  fontSize: 22,
+                  fontSize: [20,22,22,22],
                   fontWeight: "bold",
                   textDecoration: "underline",
                   color: "#6d61df",
@@ -1161,10 +1575,12 @@ const Body = () => {
                 <p>EXPLORE DASHBOARD</p>
               </div>
             </div>
-            <div>
+            <div css={mq({
+              display: ["none", "block","block","block"]
+            })}>
               <img
                 css={mq({
-                  width: 600,
+                  width: [450,600,600,600],
                   marginRight: -100,
                   marginTop: 10,
                 })}
@@ -1175,8 +1591,27 @@ const Body = () => {
         </div>
       </div>
       <div
+          css={mq({
+            position: "relative",
+            display: ["block", "none","none","none"]
+          })}
+        >
+          
+          <div
+            css={mq({
+              position: "absolute",
+              left: "50%",
+              right: "50%",
+              top: 0,
+            })}
+          >
+            <Lineone />
+          </div>
+        </div>
+      <div
         css={mq({
           position: "relative",
+          display: ["none", "block","block","block"]
         })}
       >
         >
@@ -1193,34 +1628,37 @@ const Body = () => {
       </div>
       <div
         css={mq({
-          marginTop: 90,
+          marginTop: [170,90,90,90],
+          padding: ["0px 20px", 0,0,0],
           background: "linear-gradient(180deg, #4E4885 0%, #1F1B39 100%)",
-          height: 400,
+          height: 500,
         })}
       >
         <div
           css={mq({
             display: "flex",
             justifyContent: "center",
+
           })}
         >
           <div
             css={mq({
               display: "flex",
               justifyContent: "space-between",
-
-              width: "80%",
+flexDirection: ["column","row","row","row"],
+              width: ["100%","80%","80%","80%"],
             })}
           >
             <div
               css={mq({
-                flex: "50%",
+                flex: ["100%","50%","50%","50%"],
+
               })}
             >
               <div
                 css={mq({
                   fontWeight: "bold",
-                  fontSize: 40,
+                  fontSize: [30,40,40,40],
                   color: "#fff",
                 })}
               >
@@ -1228,7 +1666,7 @@ const Body = () => {
               </div>
               <div
                 css={mq({
-                  fontSize: 25,
+                  fontSize: [22,25,25,25],
                   color: "#fff",
                 })}
               >
@@ -1241,7 +1679,7 @@ const Body = () => {
               <div
                 css={mq({
                   fontWeight: 600,
-                  fontSize: 22,
+                  fontSize: [20,22,22,22],
                   color: "#fff",
                   textDecoration: "underline",
                 })}
@@ -1251,17 +1689,17 @@ const Body = () => {
             </div>
             <div
               css={mq({
-                flex: "50%",
+                flex: ["100%","50%","50%","50%"],
               })}
             >
               <div
                 css={mq({
                   width: 400,
 
-                  marginTop: 60,
+                  marginTop: [30,60,60,60],
                   backgroundColor: "#fff",
                   borderRadius: 10,
-                  marginLeft: 150,
+                  marginLeft: [0,150,150,150],
                   boxShadow: "0px 0px 26px 0px rgba(0,0,0,0.1)",
                 })}
               >
@@ -1313,16 +1751,16 @@ const Body = () => {
                 >
                   <div
                     css={mq({
-                      fontSize: 40,
+                      fontSize: [30,40,40,40],
                       marginTop: 20,
                       fontWeight: "bold",
                     })}
                   >
-                    NGN 9,900
+                    ₦ 9,900
                   </div>
                   <div
                     css={mq({
-                      fontSize: 22,
+                    fontSize: [20,22,22,22],
                     })}
                   >
                     per year
@@ -1362,10 +1800,10 @@ const Body = () => {
                         marginTop: 30,
                       })}
                     >
-                      <img src={"svg/box.svg"} />
+                      <img css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: 22,
+                          fontSize: [20,22,22,22],
                           fontWeight: 600,
                           marginLeft: 20,
                         })}
@@ -1381,10 +1819,10 @@ const Body = () => {
                         marginTop: 30,
                       })}
                     >
-                      <img src={"svg/box.svg"} />
+                      <img css={mq({width: [25,35,35,35]})}  src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: 22,
+                          fontSize: [20,22,22,22],
                           fontWeight: 600,
                           marginLeft: 20,
                         })}
@@ -1400,10 +1838,10 @@ const Body = () => {
                         marginTop: 30,
                       })}
                     >
-                      <img src={"svg/box.svg"} />
+                      <img css={mq({width: [25,35,35,35]})}  src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: 22,
+                          fontSize: [20,22,22,22],
                           fontWeight: 600,
                           marginLeft: 20,
                         })}
@@ -1419,10 +1857,10 @@ const Body = () => {
                         marginTop: 30,
                       })}
                     >
-                      <img src={"svg/box.svg"} />
+                      <img css={mq({width: [25,35,35,35]})}  src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: 22,
+                          fontSize: [20,22,22,22],
                           fontWeight: 600,
                           marginLeft: 20,
                         })}
@@ -1451,7 +1889,7 @@ const Body = () => {
                     >
                       <div
                         css={mq({
-                          fontSize: 22,
+                          fontSize: [20,22,22,22],
                           fontWeight: 600,
                           color: "#fff",
                         })}
@@ -1461,6 +1899,7 @@ const Body = () => {
                       <img
                         css={mq({
                           marginLeft: 15,
+                          width: [25,35,35,35]
                         })}
                         src={"svg/right-arrow.svg"}
                       />
@@ -1474,7 +1913,7 @@ const Body = () => {
       </div>
       <div
         css={mq({
-          marginTop: 350,
+          marginTop: [450,350,350,350],
           backgroundColor: "#202020",
           paddingTop: 50,
         })}
@@ -1482,7 +1921,7 @@ const Body = () => {
         <div>
           <div
             css={mq({
-              fontSize: 65,
+              fontSize: [55,65,65,65],
               fontWeight: "bold",
               color: "#fff",
 
@@ -1493,7 +1932,7 @@ const Body = () => {
           </div>
           <div
             css={mq({
-              fontSize: 25,
+              fontSize: [22,25,25,25],
 
               color: "#fff",
               textAlign: "center",
@@ -1512,7 +1951,7 @@ const Body = () => {
         >
           <input
             css={mq({
-              width: "30vw",
+              width: ["50vw","30vw","30vw","30vw"],
               padding: 10,
               outline: "none",
               border: "none",
@@ -1554,6 +1993,8 @@ const Body = () => {
           css={mq({
             display: "flex",
             justifyContent: "space-evenly",
+            flexDirection: ["column","row","row","row"],
+            padding: "0px 20px",
             marginTop: 50,
           })}
         >
@@ -1561,7 +2002,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -1569,7 +2010,7 @@ const Body = () => {
             </div>
             <div
               css={mq({
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 color: "#E3FDFF",
                 marginTop: 20,
               })}
@@ -1579,7 +2020,7 @@ const Body = () => {
             <div
               css={mq({
                 fontWeight: "bold",
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 color: "#fff",
                 marginTop: 20,
               })}
@@ -1642,11 +2083,13 @@ const Body = () => {
               />
             </div>
           </div>
-          <div>
+          <div css={mq({
+            marginTop: [50, 0,0,0]
+          })}>
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -1656,7 +2099,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1665,7 +2108,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1674,7 +2117,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1683,18 +2126,20 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
               All templates
             </div>
           </div>
-          <div>
+          <div css={mq({
+            marginTop: [50, 0,0,0]
+          })}>
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -1703,7 +2148,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1712,7 +2157,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1721,7 +2166,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1730,18 +2175,20 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
               Use Cases
             </div>
           </div>
-          <div>
+          <div css={mq({
+            marginTop: [50, 0,0,0]
+          })}>
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -1750,7 +2197,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1759,7 +2206,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1768,7 +2215,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1777,7 +2224,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -1786,7 +2233,7 @@ const Body = () => {
             <div
               css={mq({
                 color: "#fff",
-                fontSize: 22,
+                fontSize: [20,22,22,22],
                 marginTop: 20,
               })}
             >

@@ -1,4 +1,4 @@
-import DashboardNav2 from "./dashboardnav2";
+import Nav2 from "./nav2";
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
 
@@ -9,67 +9,8 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const Settings = () => {
   return (
     <div>
-      <DashboardNav2>
-        <div
-          css={mq({
-            display: "flex",
-            justifyContent: "right",
-            border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#e3e3e3",
-          })}
-        >
-          <div
-            css={mq({
-              display: "flex",
-              flexDirection: "column",
-              width: "75%",
-
-              paddingRight: 50,
-              paddingTop: 20,
-              paddingBottom: 20,
-            })}
-          >
-            <div
-              css={mq({
-                display: "flex",
-                justifyContent: "space-between",
-              })}
-            >
-              <div
-                css={mq({
-                  fontSize: 35,
-                  fontWeight: 600,
-                  color: "#1f1b39",
-                })}
-              >
-                Dashboard
-              </div>
-              <div
-                css={mq({
-                  display: "flex",
-                })}
-              >
-                <img
-                  css={mq({
-                    width: 30,
-                  })}
-                  src={"/svg/bell.svg"}
-                />{" "}
-                <img
-                  css={mq({
-                    marginLeft: 20,
-                    width: 30,
-                  })}
-                  src={"/svg/user.svg"}
-                />
-              </div>
-            </div>
-            
-          </div>
+      <Nav2>
         
-        </div>
         <div
           css={mq({
             display: "flex",
@@ -81,9 +22,9 @@ const Settings = () => {
             css={mq({
               display: "flex",
               flexDirection: "column",
-              width: "75%",
+              width: ["100%", "75%", "75%", "75%"],
 
-              paddingRight: 50,
+              paddingRight: [0, 50, 50, 50],
               paddingTop: 20,
               paddingBottom: 20,
             })}
@@ -93,10 +34,11 @@ const Settings = () => {
            
             
             <div css={mq({
-                
+                paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0],
             })}>
                <div css={mq({
-                fontSize: 30,
+                fontSize: [25,30,30,30],
                 fontWeight: 600,
                
             })}><p>Account Settings</p></div>
@@ -104,7 +46,7 @@ const Settings = () => {
             <div >
                 <div css={mq({
                     display: "flex",
-                    width: "50%",
+                    width: ["100%","50%","50%","50%"],
                     alignItems: "center"
                 })}>
             <div><img
@@ -115,17 +57,21 @@ const Settings = () => {
             src={"/svg/informationbutton.svg"}
           /></div>
           <div css={mq({
+              fontSize: [15, 18, 18, 18],
                     marginLeft: 20
                 })}>Details here won’t appear publicly, they are for your account use only.</div>
           </div>
             </div>
             </div>
             <div css={mq({
-                marginTop: 20
+                marginTop: 20,
+                paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0],
             })}>
                 <div css={mq({
                     display: "flex",
-                    justifyContent: "space-between"
+                    justifyContent: "space-between",
+                    flexDirection: ["column","row","row","row"]
                 })}>
                 <div>
                 <div css={mq({
@@ -134,7 +80,7 @@ const Settings = () => {
                
             })}>Business name</div>
             <div> <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -166,10 +112,11 @@ const Settings = () => {
                 fontSize: 20,
                 marginTop: 20,
                 fontWeight: 600,
+                
                
             })}>Full name</div>
             <div> <input  css={mq({
-            width: 400,
+           width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -201,10 +148,10 @@ const Settings = () => {
 <div css={mq({
                 fontSize: 20,
                 fontWeight: 600,
-               
+                marginTop: [20, 0, 0, 0]
             })}>Phone number</div>
             <div> <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -239,7 +186,7 @@ const Settings = () => {
                
             })}>Email address</div>
             <div> <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -292,7 +239,7 @@ const Settings = () => {
                             marginTop: 50
                        })}>
                             <div css={mq({
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 fontWeight: 600,
                
             })}><p>Change Account Password</p></div>
@@ -303,7 +250,7 @@ const Settings = () => {
                
             })}>Old Password</div>
             <div> <input  css={mq({
-            width: 400,
+           width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -337,7 +284,7 @@ const Settings = () => {
                
             })}>New Password</div>
             <div> <input  css={mq({
-            width: 400,
+           width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -371,7 +318,7 @@ const Settings = () => {
                
             })}>Repeat New Password</div>
             <div> <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -427,7 +374,7 @@ const Settings = () => {
             
           </div></div>
          
-      </DashboardNav2>
+      </Nav2>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import DashboardNav2 from "./dashboardnav2";
+import Nav2 from "./nav2";
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
 
@@ -9,67 +9,8 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const Nameservers = () => {
   return (
     <div>
-      <DashboardNav2>
-        <div
-          css={mq({
-            display: "flex",
-            justifyContent: "right",
-            border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#e3e3e3",
-          })}
-        >
-          <div
-            css={mq({
-              display: "flex",
-              flexDirection: "column",
-              width: "75%",
-
-              paddingRight: 50,
-              paddingTop: 20,
-              paddingBottom: 20,
-            })}
-          >
-            <div
-              css={mq({
-                display: "flex",
-                justifyContent: "space-between",
-              })}
-            >
-              <div
-                css={mq({
-                  fontSize: 35,
-                  fontWeight: 600,
-                  color: "#1f1b39",
-                })}
-              >
-                Dashboard
-              </div>
-              <div
-                css={mq({
-                  display: "flex",
-                })}
-              >
-                <img
-                  css={mq({
-                    width: 30,
-                  })}
-                  src={"/svg/bell.svg"}
-                />{" "}
-                <img
-                  css={mq({
-                    marginLeft: 20,
-                    width: 30,
-                  })}
-                  src={"/svg/user.svg"}
-                />
-              </div>
-            </div>
-            
-          </div>
+      <Nav2>
         
-        </div>
         <div
           css={mq({
             display: "flex",
@@ -81,9 +22,9 @@ const Nameservers = () => {
             css={mq({
               display: "flex",
               flexDirection: "column",
-              width: "75%",
+              width: ["100%", "75%", "75%", "75%"],
 
-              paddingRight: 50,
+              paddingRight: [0, 50, 50, 50],
               paddingTop: 20,
               paddingBottom: 20,
             })}
@@ -93,10 +34,11 @@ const Nameservers = () => {
            
             
             <div css={mq({
-                
+                paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0],
             })}>
                <div css={mq({
-                fontSize: 30,
+                fontSize: [25,30,30,30],
                 fontWeight: 600,
                
             })}><p>Edit your Nameservers</p></div>
@@ -104,7 +46,7 @@ const Nameservers = () => {
             <div >
                 <div css={mq({
                     display: "flex",
-                    width: "50%",
+                    width: ["100%","50%","50%","50%"],
                     alignItems: "center"
                 })}>
             <div><img
@@ -115,6 +57,7 @@ const Nameservers = () => {
             src={"/svg/informationbutton.svg"}
           /></div>
           <div css={mq({
+            fontSize: [15, 18, 18, 18],
                     marginLeft: 20
                 })}>If you’re aren’t technical person, <span css={mq({
               fontWeight: 600
@@ -130,7 +73,10 @@ const Nameservers = () => {
             })}>
                 <div css={mq({
                     display: "flex",
-                    justifyContent: "space-between"
+                    justifyContent: "space-between",
+                    flexDirection: ['column','row','row','row'],
+                    paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0],
                 })}>
                 <div>
                 <div css={mq({
@@ -139,7 +85,7 @@ const Nameservers = () => {
                
             })}><p>Nameserver 1</p></div>
             <div> <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -174,7 +120,7 @@ const Nameservers = () => {
                
             })}><p>Nameserver 2</p></div>
             <div> <input  css={mq({
-            width: 400,
+           width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -209,7 +155,7 @@ const Nameservers = () => {
                
             })}><p>Nameserver 3</p></div>
             <div> <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -244,7 +190,7 @@ const Nameservers = () => {
                
             })}><p>Nameserver 4</p></div>
             <div> <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -276,7 +222,9 @@ const Nameservers = () => {
               display: "flex",
               justifyContent: "right",
               marginTop: 50,
-              marginBottom: 50
+              marginBottom: 50,
+              paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0],
 
           })}>
              <button css={mq({
@@ -299,7 +247,7 @@ const Nameservers = () => {
                        })}>SAVE CHANGES</button> </div>
           </div></div>
          
-      </DashboardNav2>
+      </Nav2>
     </div>
   );
 };

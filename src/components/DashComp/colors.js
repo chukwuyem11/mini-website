@@ -1,4 +1,4 @@
-import DashboardNav2 from "./dashboardnav2";
+import Nav2 from "./nav2"
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
 
@@ -9,67 +9,8 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const Colors = () => {
   return (
     <div>
-      <DashboardNav2>
-        <div
-          css={mq({
-            display: "flex",
-            justifyContent: "right",
-            border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#e3e3e3",
-          })}
-        >
-          <div
-            css={mq({
-              display: "flex",
-              flexDirection: "column",
-              width: "75%",
-
-              paddingRight: 50,
-              paddingTop: 20,
-              paddingBottom: 20,
-            })}
-          >
-            <div
-              css={mq({
-                display: "flex",
-                justifyContent: "space-between",
-              })}
-            >
-              <div
-                css={mq({
-                  fontSize: 35,
-                  fontWeight: 600,
-                  color: "#1f1b39",
-                })}
-              >
-                Dashboard
-              </div>
-              <div
-                css={mq({
-                  display: "flex",
-                })}
-              >
-                <img
-                  css={mq({
-                    width: 30,
-                  })}
-                  src={"/svg/bell.svg"}
-                />{" "}
-                <img
-                  css={mq({
-                    marginLeft: 20,
-                    width: 30,
-                  })}
-                  src={"/svg/user.svg"}
-                />
-              </div>
-            </div>
-            
-          </div>
+      <Nav2>
         
-        </div>
         <div
           css={mq({
             display: "flex",
@@ -81,9 +22,9 @@ const Colors = () => {
             css={mq({
               display: "flex",
               flexDirection: "column",
-              width: "75%",
+              width: ["100%", "75%","75%","75%"],
 
-              paddingRight: 50,
+              paddingRight: [0, 50, 50, 50],
               paddingTop: 20,
               paddingBottom: 20,
             })}
@@ -93,10 +34,11 @@ const Colors = () => {
            
             
             <div css={mq({
-                
+                paddingRight: [20,0,0,0],
+                paddingLeft:[20,0,0,0],
             })}>
                <div css={mq({
-                fontSize: 30,
+                fontSize: [22,30,30,30],
                 fontWeight: 600,
                
             })}><p>Choose Color Theme</p></div>
@@ -108,36 +50,40 @@ const Colors = () => {
                     
                 })}>
                     <div css={mq({
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
                         
                         backgroundColor: "#000"
                     })}></div>
                     <div css={mq({
                         marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#0036F6"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#EF2626"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#6D61DF"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#3BB75E"
                     })}></div> </div> </div> 
@@ -151,36 +97,41 @@ const Colors = () => {
                     
                 })}>
                     <div css={mq({
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#2F80ED"
                     })}></div>
                     <div css={mq({
                         marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#6FCF97"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#27AE60"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#219653"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#F2994A"
                     })}></div> </div> </div> 
@@ -194,36 +145,41 @@ const Colors = () => {
                     
                 })}>
                     <div css={mq({
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#D828A7"
                     })}></div>
                     <div css={mq({
                         marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#A8C00F"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#EC6215"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#14B7C1"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#1983E4"
                     })}></div> </div> </div> 
@@ -237,36 +193,41 @@ const Colors = () => {
                     
                 })}>
                     <div css={mq({
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#1F1B39"
                     })}></div>
                     <div css={mq({
                         marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#F2C94C"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#EB5757"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#E4405F"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#828282"
                     })}></div> </div> </div> 
@@ -280,43 +241,50 @@ const Colors = () => {
                     
                 })}>
                     <div css={mq({
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#9B51E0"
                     })}></div>
                     <div css={mq({
                         marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                        width: [25,40,40,40],
+                        height: [25,40,40,40],
+                        
                         
                         backgroundColor: "#BB6BD9"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#4F4F4F"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#5025D1"
                     })}></div>
                     <div css={mq({
                          marginLeft: 10,
-                        width: 40,
-                        height: 40,
+                         width: [25,40,40,40],
+                         height: [25,40,40,40],
+                         
                         
                         backgroundColor: "#2D9CDB"
                     })}></div> </div> </div> 
             </div>
             </div>
             <div css={mq({
-                marginTop: 50
+                marginTop: 50,
+                paddingRight: [20,0,0,0],
+                paddingLeft:[20,0,0,0],
             })}>
                 <div css={mq({
                     display: "flex",
@@ -324,7 +292,7 @@ const Colors = () => {
                     alignItems: "center"
                 })}>
                <div css={mq({
-                fontSize: 30,
+                fontSize: [22,30,30,30],
                 fontWeight: 600,
                
             })}><p>Input Color Code</p></div> <div css={mq({
@@ -333,7 +301,7 @@ const Colors = () => {
                 marginLeft: 50
             })}>*optional</div></div>
             <div> <input placeholder="Businessname.com" css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -365,7 +333,10 @@ const Colors = () => {
               display: "flex",
               justifyContent: "right",
               marginTop: 50,
-              marginBottom: 50
+              marginBottom: 50,
+              paddingRight: [20,0,0,0],
+                paddingLeft:[20,0,0,0],
+              
 
           })}>
              <button css={mq({
@@ -388,7 +359,7 @@ const Colors = () => {
                        })}>SAVE CHANGES</button> </div>
           </div></div>
          
-      </DashboardNav2>
+      </Nav2>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import DashboardNav2 from "./dashboardnav2";
+import Nav2 from "./nav2"
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
 
@@ -7,6 +7,67 @@ const query = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const Upgrade = () => {
+const services = [
+    {
+        name: "Email Accounts",
+        number: 5,
+        Amount: 8900,
+        period: "One-time fee",
+        button: "UPGRADE",
+        icon: "carbonupgrade"
+    },
+    {
+        name: "Email Accounts",
+        number: 100,
+        Amount: 8900,
+        period: "One-time fee",
+        button: "UPGRADE",
+        icon: "carbonupgrade"
+    },
+    {
+        name: "Domain Links",
+        number: 100,
+        Amount: 8900,
+        period: "One-time fee",
+        button: "UPGRADE",
+        icon: "carbonupgrade"
+    },
+    {
+        name: "Email Storage",
+        number: "2GB",
+        Amount: 8900,
+        period: "Yearly",
+        button: "UPGRADE",
+        icon: "carbonupgrade"
+    },
+    {
+       
+        name: "Email Storage",
+        number: "10GB",
+        Amount: 8900,
+        period: "Yearly",
+        button: "UPGRADE",
+        icon: "carbonupgrade"
+    },
+    {
+        name: "Email Storage",
+        number: "50GB",
+        Amount: 8900,
+        period: "Yearly",
+        button: "UPGRADE",
+        icon: "carbonupgrade"
+    },
+    {
+        name: "Full Ecommerce Website",
+        number: 5,
+        Amount: 8900,
+        period: "Dynamic",
+        button: "LEARN MORE",
+        icon: "options"
+    },
+    
+]
+
     function cardHide(card) {
         let hideNum = [];
           for(let i = 0; i < card.length; i++){
@@ -23,67 +84,8 @@ const Upgrade = () => {
     console.log(ade)
   return (
     <div>
-      <DashboardNav2>
-        <div
-          css={mq({
-            display: "flex",
-            justifyContent: "right",
-            border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#e3e3e3",
-          })}
-        >
-          <div
-            css={mq({
-              display: "flex",
-              flexDirection: "column",
-              width: "75%",
-
-              paddingRight: 50,
-              paddingTop: 20,
-              paddingBottom: 20,
-            })}
-          >
-            <div
-              css={mq({
-                display: "flex",
-                justifyContent: "space-between",
-              })}
-            >
-              <div
-                css={mq({
-                  fontSize: 35,
-                  fontWeight: 600,
-                  color: "#1f1b39",
-                })}
-              >
-                Dashboard
-              </div>
-              <div
-                css={mq({
-                  display: "flex",
-                })}
-              >
-                <img
-                  css={mq({
-                    width: 30,
-                  })}
-                  src={"/svg/bell.svg"}
-                />{" "}
-                <img
-                  css={mq({
-                    marginLeft: 20,
-                    width: 30,
-                  })}
-                  src={"/svg/user.svg"}
-                />
-              </div>
-            </div>
-            
-          </div>
+      <Nav2>
         
-        </div>
         <div
           css={mq({
             display: "flex",
@@ -95,11 +97,13 @@ const Upgrade = () => {
             css={mq({
               display: "flex",
               flexDirection: "column",
-              width: "75%",
+              width: ["100%", "75%","75%","75%"],
 
-              paddingRight: 50,
+              paddingRight: [0, 50, 50, 50],
               paddingTop: 20,
               paddingBottom: 20,
+              paddingRight: [20, 0, 0, 0],
+              paddingLeft: [20, 0, 0, 0],
             })}
           >
 
@@ -107,11 +111,11 @@ const Upgrade = () => {
            
             
             <div css={mq({
-                
+               
                 marginTop: 40
             })}>
                  <div css={mq({
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 fontWeight: 600,
                
                
@@ -119,7 +123,7 @@ const Upgrade = () => {
             })}>Manage Payment Methods</div>
               <div css={mq({
                     display: "flex",
-                    width: "65%",
+                    width: ["100%","65%","65%","65%"],
                     alignItems: "center",
                     marginTop: 20
                 })}>
@@ -131,7 +135,8 @@ const Upgrade = () => {
             src={"/svg/informationbutton.svg"}
           /></div>
           <div css={mq({
-                    marginLeft: 20
+                    marginLeft: 20,
+                    fontSize: [15, 18, 18, 18],
                 })}>Whichever package you purhase will be added. If you have buy <span css={mq({
                     fontWeight: 600
                 })}> Email Accounts (5)</span> and you previously have <span css={mq({
@@ -146,12 +151,18 @@ const Upgrade = () => {
             
             <div css={
                 mq({
-                    marginTop: 20
+                    marginTop: 20,
+                    paddingRight: 20,
+                    display: "flex",
+                    display: ["none", "block", "block", "block"]
+                    
                   
                 })
             }>
+
+                <div>
                
-            <table css={mq({
+                <table css={mq({
                 backgroundColor: "#fff",
                 marginTop: 20,
                 borderRadius: 10,
@@ -160,7 +171,8 @@ const Upgrade = () => {
         borderWidth: 1,
         borderColor: "#EFF1F2",
             })}>
-                <thead>
+
+<thead>
   <tr css={mq({
       textAlign: "left",
       
@@ -214,7 +226,8 @@ const Upgrade = () => {
     
    
   </tr></thead>
-  <tbody>
+
+  {services.map((service) => (<tbody>
   <tr>
   <td css={mq({
         paddingTop: 20,
@@ -225,12 +238,12 @@ const Upgrade = () => {
             borderWidth: 1,
             borderColor: "transparent",
             borderBottomColor: "#EFF1F2",
-            fontSize: 18,
+            fontSize: [16,18,18,18],
             color: "#777777"
-    })}>Email Accounts<span css={mq({
+    })}>{service.name}<span css={mq({
         color: "#6D61DF",
         fontWeight: 600
-    })}>(5)</span></td>
+    })}>({service.number})</span></td>
     <td css={mq({
         paddingTop: 20,
                 paddingBottom: 20,
@@ -240,29 +253,29 @@ const Upgrade = () => {
             borderWidth: 1,
             borderColor: "transparent",
             borderBottomColor: "#EFF1F2",
-            fontSize: 18,
+            fontSize: [16,18,18,18],
             color: "#3BB75E",
             fontWeight: 700
-    })}>₦8,900</td>
+})}>₦{service.Amount}</td>
     <td css={mq({
         paddingTop: 20,
                 paddingBottom: 20,
                 paddingLeft: 30,
                 paddingRight: 30,
                 border: "solid",
-                fontSize: 18,
+                fontSize: [16,18,18,18],
             color: "#777777",
             borderWidth: 1,
             borderColor: "transparent",
             borderBottomColor: "#EFF1F2",
-    })}>One-time fee</td>
+})}>{service.period}</td>
     <td css={mq({
         paddingTop: 20,
                 paddingBottom: 20,
                 paddingLeft: 30,
                 paddingRight: 30,
                 border: "solid",
-                fontSize: 18,
+                fontSize: [16,18,18,18],
             color: "#777777",
             borderWidth: 1,
             borderColor: "transparent",
@@ -270,7 +283,7 @@ const Upgrade = () => {
     })}> <button css={mq({
         fontSize: 18,
         border: "none",
-
+        display: ["none","block","block","block"],
         backgroundColor: "#6D61DF",
         fontFamily: "Tisa Sans Pro",
 color: "#fff",
@@ -284,529 +297,185 @@ fontWeight: "bold",
 
  
  
-    })}>UPGRADE</button></td>
+})}>{service.button}</button>
+
+<img
+              css={mq({
+                display: ["block","none","none","none"],
+                marginLeft: 50,
+              })}
+              src={`/svg/${service.icon}.svg`}
+            />
+</td>
     
     
-  </tr>
-  <tr>
-  <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
+  </tr></tbody>))}
+            </table>
+
+                  </div>
+               
+            </div>
+
+<div css={mq({
+    marginTop: 50
+})}>
+    <div css={mq({
+                 
+                 marginBottom: 20
+              })}>
+                <div css={mq({
+                backgroundColor: "#fff",
+                borderRadius: 10,
                 border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
+        borderWidth: 1,
+        borderColor: "#EFF1F2",
+        
+        display: ["block", "none","none","none"]
+        
+            })}>
+                
+              <div css={mq({
+                display: "flex",
+                alignItems: "center",
+                border: "solid",
+                borderWidth: 1,
+                borderColor: "transparent",
+                borderBottomColor: "#EFF1F2",
+                paddingLeft: 10,
+              paddingRight: 10,
+              paddingTop: 10,
+              paddingBottom: 10,
+              })}>
+              <div css={mq({
+                flex: "40%",
+                padding: 10
+              })}>
+                
+              <div css={mq({
+                fontSize: 16,
+                fontWeight: 600
+              })}>
+              Service</div>
+             
+             </div>
+             <div css={mq({
+               flex: "30%"
+              })}>
+              
+              <div css={mq({
+               
+               
+               fontSize: 16,
+               fontWeight: 600
+              })}>Amount</div></div>
+              <div css={mq({
+               flex: "30%"
+              })}>
+              
+              <div css={mq({
+               fontSize: 16,
+               fontWeight: 600
+              })}>
+              Period</div></div>
+             
+              <div css={mq({
+                flex: "10%",
+                display: "flex",
+                justifyContent: "center"
+              })}>
+                  
+                
+               </div>
+              </div>
+           
+
+              
+    
+              {services.map((service) => (<div css={mq({
+                 
+                 
+              })}>
+                <div css={mq({
+                backgroundColor: "#fff",
+                borderRadius: 10,
+                border: "solid",
+                borderWidth: 1,
+                borderColor: "transparent",
+                borderBottomColor: "#EFF1F2",
+       
+        display: ["block", "none","none","none"]
+        
+            })}>
+              <div css={mq({
+                display: "flex",
+                alignItems: "center",
+              paddingLeft: 10,
+              paddingRight: 10
+              })}>
+              <div css={mq({
+                flex: "40%",
+                padding: 10,
+                
+              })}>
+                
+              <div css={mq({
+               
+                
+            fontSize: [16,18,18,18],
             color: "#777777"
-    })}>Email Accounts<span css={mq({
+              })}>
+              {service.name}</div>
+              <div css={mq({
         color: "#6D61DF",
         fontWeight: 600
-    })}>(100)</span></td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#3BB75E",
-            fontWeight: 700
-    })}>₦8,900</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}>One-time fee</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}> <button css={mq({
-        fontSize: 18,
-        border: "none",
+    })}>({service.number})</div>
+             </div>
+             <div css={mq({
+               flex: "30%"
+              })}>
+              
+              <div css={mq({
+               
+               fontSize: [16,18,18,18],
+               color: "#3BB75E",
+               fontWeight: 700
+              })}>₦{service.Amount}</div></div>
+              <div css={mq({
+               flex: "30%"
+              })}>
+              
+              <div css={mq({
+                fontSize: 16,
+                marginLeft: 5,
+              color: "#777777"
+              })}>{service.period}</div></div>
+             
+              <div css={mq({
+                flex: "10%",
+                display: "flex",
+                justifyContent: "center"
+              })}>
+                  
+                
+                <img
+              css={mq({
+                
+                marginLeft: 50,
+              })}
+              src={`/svg/${service.icon}.svg`}
+            /></div>
+              </div>
+            </div>
 
-        backgroundColor: "#6D61DF",
-        fontFamily: "Tisa Sans Pro",
-color: "#fff",
-paddingLeft: 30,
-paddingRight: 30,
-paddingTop: 10,
-paddingBottom: 10,
-borderRadius: 5,
-fontWeight: "bold",
-
-
- 
- 
-    })}>UPGRADE</button></td>
-    
-    
-  </tr>
-  <tr>
-  <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#777777"
-    })}>Domain Links <span css={mq({
-        color: "#6D61DF",
-        fontWeight: 600
-    })}>(5)</span></td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#3BB75E",
-            fontWeight: 700
-    })}>₦8,900</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}>One-time fee</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}> <button css={mq({
-        fontSize: 18,
-        border: "none",
-
-        backgroundColor: "#6D61DF",
-        fontFamily: "Tisa Sans Pro",
-color: "#fff",
-paddingLeft: 30,
-paddingRight: 30,
-paddingTop: 10,
-paddingBottom: 10,
-borderRadius: 5,
-fontWeight: "bold",
-
-
- 
- 
-    })}>UPGRADE</button></td>
-    
-    
-  </tr>
-  <tr>
-  <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#777777"
-    })}>Domain Links <span css={mq({
-        color: "#6D61DF",
-        fontWeight: 600
-    })}>(100)</span></td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#3BB75E",
-            fontWeight: 700
-    })}>₦8,900</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}>One-time fee</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}> <button css={mq({
-        fontSize: 18,
-        border: "none",
-
-        backgroundColor: "#6D61DF",
-        fontFamily: "Tisa Sans Pro",
-color: "#fff",
-paddingLeft: 30,
-paddingRight: 30,
-paddingTop: 10,
-paddingBottom: 10,
-borderRadius: 5,
-fontWeight: "bold",
-
-
- 
- 
-    })}>UPGRADE</button></td>
-    
-    
-  </tr>
-  <tr>
-  <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#777777"
-    })}>Email Storage <span css={mq({
-        color: "#6D61DF",
-        fontWeight: 600
-    })}>(2 GB)</span></td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#3BB75E",
-            fontWeight: 700
-    })}>₦8,900</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}>Yearly</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}> <button css={mq({
-        fontSize: 18,
-        border: "none",
-
-        backgroundColor: "#6D61DF",
-        fontFamily: "Tisa Sans Pro",
-color: "#fff",
-paddingLeft: 30,
-paddingRight: 30,
-paddingTop: 10,
-paddingBottom: 10,
-borderRadius: 5,
-fontWeight: "bold",
-
-
- 
- 
-    })}>UPGRADE</button></td>
-    
-    
-  </tr>
-  <tr>
-  <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#777777"
-    })}>Email Storage <span css={mq({
-        color: "#6D61DF",
-        fontWeight: 600
-    })}>(10 GB)</span></td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#3BB75E",
-            fontWeight: 700
-    })}>₦8,900</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}>Yearly</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}> <button css={mq({
-        fontSize: 18,
-        border: "none",
-
-        backgroundColor: "#6D61DF",
-        fontFamily: "Tisa Sans Pro",
-color: "#fff",
-paddingLeft: 30,
-paddingRight: 30,
-paddingTop: 10,
-paddingBottom: 10,
-borderRadius: 5,
-fontWeight: "bold",
-
-
- 
- 
-    })}>UPGRADE</button></td>
-    
-    
-  </tr>
-  <tr>
-  <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#777777"
-    })}>Email Storage <span css={mq({
-        color: "#6D61DF",
-        fontWeight: 600
-    })}>(50 GB)</span></td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#3BB75E",
-            fontWeight: 700
-    })}>₦8,900</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}>Yearly</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}> <button css={mq({
-        fontSize: 18,
-        border: "none",
-
-        backgroundColor: "#6D61DF",
-        fontFamily: "Tisa Sans Pro",
-color: "#fff",
-paddingLeft: 30,
-paddingRight: 30,
-paddingTop: 10,
-paddingBottom: 10,
-borderRadius: 5,
-fontWeight: "bold",
-
-
- 
- 
-    })}>UPGRADE</button></td>
-    
-    
-  </tr>
-  <tr>
-  <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#777777"
-    })}>Full Ecommerce Website<span css={mq({
-        color: "#6D61DF",
-        fontWeight: 600
-    })}>(5)</span></td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-            fontSize: 18,
-            color: "#3BB75E",
-            fontWeight: 700
-    })}>₦8,900</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}>Dynamic</td>
-    <td css={mq({
-        paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 30,
-                paddingRight: 30,
-                border: "solid",
-                fontSize: 18,
-            color: "#777777",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#EFF1F2",
-    })}> <button css={mq({
-        fontSize: 18,
-        border: "none",
-
-        backgroundColor: "#6D61DF",
-        fontFamily: "Tisa Sans Pro",
-color: "#fff",
-paddingLeft: 30,
-paddingRight: 30,
-paddingTop: 10,
-paddingBottom: 10,
-borderRadius: 5,
-fontWeight: "bold",
-
-
- 
- 
-    })}>LEARN MORE</button></td>
-    
-    
-  </tr></tbody>
-  
-</table></div>
+              </div>))} </div></div>
+              
+            </div>
 
 
             
           </div></div>
          
-      </DashboardNav2>
+      </Nav2>
     </div>
   );
 };

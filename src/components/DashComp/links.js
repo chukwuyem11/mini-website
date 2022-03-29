@@ -1,4 +1,4 @@
-import DashboardNav2 from "./dashboardnav2";
+import Nav2 from "./nav2"
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
 
@@ -9,67 +9,8 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const Links = () => {
   return (
     <div>
-      <DashboardNav2>
-        <div
-          css={mq({
-            display: "flex",
-            justifyContent: "right",
-            border: "solid",
-            borderWidth: 1,
-            borderColor: "transparent",
-            borderBottomColor: "#e3e3e3",
-          })}
-        >
-          <div
-            css={mq({
-              display: "flex",
-              flexDirection: "column",
-              width: "75%",
-
-              paddingRight: 50,
-              paddingTop: 20,
-              paddingBottom: 20,
-            })}
-          >
-            <div
-              css={mq({
-                display: "flex",
-                justifyContent: "space-between",
-              })}
-            >
-              <div
-                css={mq({
-                  fontSize: 35,
-                  fontWeight: 600,
-                  color: "#1f1b39",
-                })}
-              >
-                Dashboard
-              </div>
-              <div
-                css={mq({
-                  display: "flex",
-                })}
-              >
-                <img
-                  css={mq({
-                    width: 30,
-                  })}
-                  src={"/svg/bell.svg"}
-                />{" "}
-                <img
-                  css={mq({
-                    marginLeft: 20,
-                    width: 30,
-                  })}
-                  src={"/svg/user.svg"}
-                />
-              </div>
-            </div>
-            
-          </div>
+      <Nav2>
         
-        </div>
         <div
           css={mq({
             display: "flex",
@@ -81,9 +22,9 @@ const Links = () => {
             css={mq({
               display: "flex",
               flexDirection: "column",
-              width: "75%",
+              width: ["100%", "75%", "75%", "75%"],
 
-              paddingRight: 50,
+              paddingRight: [0, 50, 50, 50],
               paddingTop: 20,
               paddingBottom: 20,
             })}
@@ -93,10 +34,11 @@ const Links = () => {
            
             
             <div css={mq({
-                
+                paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0], 
             })}>
                <div css={mq({
-                fontSize: 30,
+                 fontSize: [25,30,30,30],
                 fontWeight: 600,
                
             })}><p>Verify your Facebook Ad Account</p></div>
@@ -104,7 +46,7 @@ const Links = () => {
             <div >
             <div css={mq({
                     display: "flex",
-                    width: "60%",
+                    width: ["100%","60%","60%","60%"],
                     alignItems: "center"
                 })}>
             <div><img
@@ -115,6 +57,7 @@ const Links = () => {
             src={"/svg/informationbutton.svg"}
           /></div>
           <div css={mq({
+               fontSize: [15, 18, 18, 18],
                     marginLeft: 20
                 })}>You can easily turn lengthy URLs to your website links. E.g <span css={mq({
                     color: "#E4405F",
@@ -127,19 +70,21 @@ const Links = () => {
             </div>
             </div>
             <div css={mq({
-                marginTop: 50
+                marginTop: 50,
+                paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0], 
             })}>
                
             <div>
             <div css={mq({
-                fontSize: 25,
+                fontSize: [22,25,25,25],
                 fontWeight: 600,
                
             })}><p>Link 1:</p></div>
             <div>
-                <div><label>Link Name</label></div>
+                <div><label css={mq({ color: "#777777", fontSize: [18, 20, 20, 20], fontWeight: 500})}>Link Name</label></div>
                  <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -170,9 +115,9 @@ const Links = () => {
 <div css={mq({
     marginTop: 50
 })}>
-                <div><label>Link URL</label></div>
+                <div><label css={mq({ color: "#777777", fontSize: [18, 20, 20, 20], fontWeight: 500})}>Link URL</label></div>
                  <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -206,14 +151,14 @@ const Links = () => {
                
             })}>
             <div css={mq({
-                fontSize: 25,
+                 fontSize: [22,25,25,25],
                 fontWeight: 600,
                
             })}><p>Link 2:</p></div>
             <div>
-                <div><label>Link Name</label></div>
+                <div><label css={mq({ color: "#777777", fontSize: [18, 20, 20, 20], fontWeight: 500})}>Link Name</label></div>
                  <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -244,9 +189,9 @@ const Links = () => {
 <div css={mq({
     marginTop: 50
 })}>
-                <div><label>Link URL</label></div>
+                <div><label css={mq({ color: "#777777", fontSize: [18, 20, 20, 20], fontWeight: 500})}>Link URL</label></div>
                  <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -279,14 +224,14 @@ const Links = () => {
                
             })}>
             <div css={mq({
-                fontSize: 25,
+                  fontSize: [22,25,25,25],
                 fontWeight: 600,
                
             })}><p>Link 3:</p></div>
             <div>
-                <div><label>Link Name</label></div>
+                <div><label css={mq({ color: "#777777", fontSize: [18, 20, 20, 20], fontWeight: 500})}>Link Name</label></div>
                  <input  css={mq({
-            width: 400,
+            width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -317,9 +262,9 @@ const Links = () => {
 <div css={mq({
     marginTop: 50
 })}>
-                <div><label>Link URL</label></div>
+                <div><label css={mq({ color: "#777777", fontSize: [18, 20, 20, 20], fontWeight: 500})}>Link URL</label></div>
                  <input  css={mq({
-            width: 400,
+           width: ["100%",400,400,400],
             paddingTop: 15,
             paddingBottom: 15,
             paddingLeft: 10,
@@ -376,7 +321,9 @@ const Links = () => {
               display: "flex",
               justifyContent: "right",
               marginTop: 50,
-              marginBottom: 50
+              marginBottom: 50,
+              paddingRight: [20, 0, 0, 0],
+                paddingLeft: [20, 0, 0, 0], 
 
           })}>
              <button css={mq({
@@ -399,7 +346,7 @@ const Links = () => {
                        })}>SAVE CHANGES</button> </div>
           </div></div>
          
-      </DashboardNav2>
+      </Nav2>
     </div>
   );
 };

@@ -7,10 +7,14 @@ const breakpoints = [576, 768, 992, 1200];
 const query = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
+
+
 const Hero = () => {
   return (
     <div css={mq({
-        backgroundImage: "url('herobg.png')",
+        backgroundSize: "cover",
+        backgroundImage: "url('herobg.jpg'), linear-gradient(0deg, rgba(31, 27, 57, 0.75), rgba(31, 27, 57, 0.75))",
+        backgroundBlendMode: "overlay"
        
         
     })}>
@@ -27,7 +31,7 @@ const Hero = () => {
                 color: "#fff",
                 textAlign: "center",
                 marginTop: 100,
-                fontSize: 65,
+                fontSize: [45,65,65,65],
                 fontWeight: "bold"
             })}>
             Get a mini website</div>
@@ -40,8 +44,8 @@ const Hero = () => {
             <div css={mq({
                 color: "#fff",
                 textAlign: "center",
-                fontSize: 25,
-                width: "40vw",
+                fontSize: [22,25,25,25],
+                width: ["80%","40vw","40vw","40vw"],
            
                
             })}>
@@ -54,7 +58,7 @@ const Hero = () => {
             marginBottom: 20,
         })}>
         <input css={mq({
-            width: "30vw",
+             width: ["60vw","30vw","30vw","30vw"],
             padding: 10,
             outline: "none",
                 border: "none",
@@ -89,7 +93,7 @@ const Hero = () => {
                 color: "#fff",
                 textAlign: "center",
                 fontSize: 20,
-               
+                width: ["100%","50vw","50vw","50vw"],
                
                
             })}>

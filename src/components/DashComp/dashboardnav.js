@@ -19,7 +19,7 @@ const DashboardNav = (props) => {
                 
             })}>
                 <div css={mq({
-
+                    display: ["none", "block", "block", "block"]
                 })}><div css={mq({
                     
                     backgroundColor: "#1f1b39",
@@ -243,7 +243,7 @@ const DashboardNav = (props) => {
                     })}>Settings</div></div>
                     </div></div>
     <div css={mq({
-        flex: "70%",
+        flex: ["100%","70%","70%","70%"],
        
     })} >{props.children}</div>
             </div>
