@@ -43,7 +43,7 @@ const Details = () => {
                 <p>Upload Image</p>
               </div>
               <div>
-                <label class="custom-file-upload">
+                <label >
                   <input
                     css={mq({
                       display: "none",
@@ -159,7 +159,7 @@ const Details = () => {
                   name="txtname"
                   rows="5"
                   cols="45"
-                  maxlength="200"
+                 
                   css={mq({
                     paddingTop: 15,
                     paddingBottom: 15,

@@ -325,7 +325,7 @@ const Emails = () => {
             </div>
             </div>
             <div>
-              {mails.map((mail) => (<div css={mq({
+              {mails.map((mail) => (<div key={mail.id} css={mq({
                  paddingLeft: 10,
                  paddingRight: 10,
                  marginBottom: 20

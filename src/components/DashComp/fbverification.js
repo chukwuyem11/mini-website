@@ -79,7 +79,7 @@ const FBverification = () => {
             })}>
                
             <div>
-                <textarea id="txtid" name="txtname" rows="10" cols="45" maxlength="200" css={mq({
+                <textarea id="txtid" name="txtname" rows="10" cols="45"  css={mq({
            
             paddingTop: 15,
             paddingBottom: 15,
