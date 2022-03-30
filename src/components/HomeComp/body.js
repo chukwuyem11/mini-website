@@ -4,6 +4,8 @@ import facepaint from "facepaint";
 import Lineone from "../../svgs/lineonesvg";
 import Linetwo from "../../svgs/linetwosvg";
 // import Linethree from "../../";
+import {  motion, AnimatePresence  } from "framer-motion";
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 
 const breakpoints = [576, 768, 992, 1200];
@@ -13,6 +15,58 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const Body = () => {
   const [tab, setTab] = React.useState("a");
   const [tab1, setTab1] = React.useState("a");
+  const [position, positionSet] = React.useState(0);
+
+  
+  const right = () => {
+    if (position < features.length - 1) {
+      positionSet(position + 1);
+    }
+  }
+
+  const left = () => {
+    if (position > 0) {
+      positionSet(position - 1);
+    }
+  }
+  const features = [
+    {
+        id: 0,
+        img : "svg/green.svg",
+        title: "Unlimited Links.",
+        body: "Link to everywhere. Add an unlimited number of links to your website."
+      },
+      {
+        id: 1,
+        img : "svg/blue.svg",
+        title: " Social Icons.",
+        body: "Easily link your all social media accounts. Let people easily connect with you."
+      },
+      {
+        id: 2,
+        img : "svg/purple.svg",
+        title: "Logo/Personal Picture.",
+        body: "Easily upload your brand identity or personal picture to your mini-website."
+      },
+      {
+        id: 3,
+        img : "svg/yellow.svg",
+        title: "Contact Form.",
+        body: "Let individuals easily fill a form to reach to you or your business. You get alerted instantly."
+      },
+      {
+        id: 4,
+        img : "svg/red.svg",
+        title: "SEO.",
+        body: "Get found easily on Google or other search engines with Search Engine Optimization."
+      },
+      {
+        id: 5,
+        img : "svg/orange.svg",
+        title: "Meta Tags Editor.",
+        body: "Easily add Facebook Pixel, Google Analytics, Facebook Verification codes to your website."
+      },
+  ]
   return (
     <div>
       <div>
@@ -1151,7 +1205,7 @@ const Body = () => {
 <img
                 css={mq({
                   width: 300,
-                  // marginLeft: -50,
+                  marginBottom: [-250, 0,0,0],
                   display: tab1 == "a" ? "block" : "none",
                 })}
                 src={"pics/linker.png"}
@@ -1165,6 +1219,7 @@ const Body = () => {
                 css={mq({
              
                   width: 300,
+                  marginBottom: [-250, 0,0,0],
                   display: tab1 == "b" ? "block" : "none",
                 })}
                 src={"pics/profiler.png"}
@@ -1179,7 +1234,7 @@ const Body = () => {
                  
                  
                   width: 300,
-                  
+                  marginBottom: [-250, 0,0,0],
                   display: tab1 == "c" ? "block" : "none",
                 })}
                 src={"pics/postee.png"}
@@ -1404,228 +1459,126 @@ const Body = () => {
                   
 
                   </div>
+                 
                   <div css={mq({
                       marginTop: 20,
                       marginBottom: [50,0,0,0],
                       display: ["block","none","none","none"],
                    
                   })}>
+                    
+            <div css={css`
+            display: flex;
+            justify-content: center;
+            z-index: 1
+            `}>
+        <div  css={css`
+          width: 100%;
+          height: 600px;
+          overflow: hidden;
+          padding: 0px;
+          margin: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+         
+          `}>
+            
+          <div css={css`
+          position: relative;
+          `} >
+            
+             {features.map((slide) => (
+      <motion.div
+     
+                  css={css`
+                  position: absolute;
+                
+  overflow: hidden;
+ 
+  border-radius: 10px;
+  top: 0;
+        
+       
+       
+                  `}
+                  key={slide.id}
+                  initial={{ scale: 0, rotation: -180 }}
+                  animate={{
+                    rotate: 0,
+                    left: `${(slide.id - position) * 60 - 30}vw`,
+                    scale: slide.id === position ? 1 : 0.8,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                  }}
+                >
+                  <div
+                    css={mq({
+                      backgroundColor: "#161328",
+                      borderRadius: 10,
+                      padding: 20,
+                      height: 230,
+                      width: 250,
+                    })}
+                  >
+                    <div>
+                      <img src={slide.img} />
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: [20,22,22,22],
+                        fontWeight: "bold",
+                        color: "#fff",
+                      })}
+                    >
+                      <p>{slide.title}</p>
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: 14,
+
+                        color: "#fff",
+                      })}
+                    >
+                      <p>
+                       {slide.body}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>))}
+                <div css={mq({
+                      display: "flex",
+                      
+                      position: "absolute" ,
+                      left: "50%",
+                      right: "50%",
+                      top: 250
+                    })}>
                     <div css={mq({
-                      display: "flex",
-                      justifyContent: "space-between",
-                      marginBottom: 15
-                    })}>
- <div
-                    css={mq({
-                      backgroundColor: "#161328",
-                      borderRadius: 10,
-                      padding: 20,
-                      width: 200
-                     
                       
-                    })}
-                  >
-                    <div>
-                      <img src={"svg/green.svg"} />
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: [20,22,22,22],
-                        fontWeight: "bold",
-                        color: "#fff",
-                      })}
-                    >
-                      <p>Unlimited Links.</p>
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: 14,
-
-                        color: "#fff",
-                      })}
-                    >
-                      <p>
-                        Link to everywhere. Add an unlimited number of links to
-                        your website.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    css={mq({
-                      backgroundColor: "#161328",
-                      borderRadius: 10,
-                      padding: 20,
-                      width: 200
-                    })}
-                  >
-                    <div>
-                      <img src={"svg/blue.svg"} />
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: [20,22,22,22],
-                        fontWeight: "bold",
-                        color: "#fff",
-                      })}
-                    >
-                      <p>Social Icons.</p>
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: 14,
-
-                        color: "#fff",
-                      })}
-                    >
-                      <p>
-                        Easily link your all social media accounts. Let people
-                        easily connect with you.
-                      </p>
-                    </div>
-                  </div></div>
-                  <div css={mq({
-                      display: "flex",
-                      justifyContent: "space-between",
-                      marginBottom: 15
                     })}>
-                  <div
-                    css={mq({
-                      backgroundColor: "#161328",
-                      borderRadius: 10,
-                      padding: 20,
-                   width: 200
-                    })}
-                  >
-                    <div>
-                      <img src={"svg/purple.svg"} />
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: [20,22,22,22],
-                        fontWeight: "bold",
-                        color: "#fff",
-                      })}
-                    >
-                      <p>Logo/Personal Picture.</p>
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: 14,
-
-                        color: "#fff",
-                      })}
-                    >
-                      <p>
-                        Easily upload your brand identity or personal picture to
-                        your mini-website.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    css={mq({
-                      backgroundColor: "#161328",
-                      borderRadius: 10,
-                      padding: 20,
-                      width: 200
-                    })}
-                  >
-                    <div>
-                      <img src={"svg/yellow.svg"} />
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: [20,22,22,22],
-                        fontWeight: "bold",
-                        color: "#fff",
-                      })}
-                    >
-                      <p>Contact Form.</p>
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: 14,
-
-                        color: "#fff",
-                      })}
-                    >
-                      <p>
-                        Let individuals easily fill a form to reach to you or
-                        your business. You get alerted instantly.
-                      </p>
-                    </div>
-                  </div> </div>
-                  <div css={mq({
-                      display: "flex",
-                      justifyContent: "space-between",
-                      marginBottom: 15
-                    })}>
-                  <div
-                    css={mq({
-                      backgroundColor: "#161328",
-                      borderRadius: 10,
-                      padding: 20,
-                      width: 200
-                    })}
-                  >
-                    <div>
-                      <img src={"svg/red.svg"} />
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: [20,22,22,22],
-                        fontWeight: "bold",
-                        color: "#fff",
-                      })}
-                    >
-                      <p>SEO.</p>
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: 14,
-
-                        color: "#fff",
-                      })}
-                    >
-                      <p>
-                        Get found easily on Google or other search engines with
-                        Search Engine Optimization.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    css={mq({
-                      backgroundColor: "#161328",
-                      borderRadius: 10,
-                      padding: 20,
-                      width: 200
+                      <div css={mq({
+                      fontSize: 30,
+                      marginRight: 10
+                    })} onClick={() => left()}>
+                      <BsArrowLeftCircle color="#fff" /></div>
+               
+            </div>
+            <div  css={mq({
                       
-                    })}
-                  >
-                    <div>
-                      <img src={"svg/orange.svg"} />
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: [20,22,22,22],
-                        fontWeight: "bold",
-                        color: "#fff",
-                      })}
-                    >
-                      <p>Meta Tags Editor.</p>
-                    </div>
-                    <div
-                      css={mq({
-                        fontSize: 14,
-
-                        color: "#fff",
-                      })}
-                    >
-                      <p>
-                        Easily add Facebook Pixel, Google Analytics, Facebook
-                        Verification codes to your website.
-                      </p>
-                    </div>
-                  </div></div>
+                    })}>
+            <div  css={mq({
+                      fontSize: 30,
+                      marginLeft: 10
+                    })} onClick={() => right()}>
+              <BsArrowRightCircle color="#fff" /></div>
+                
+            </div></div>
+                </div>
+        </div> </div>
                   </div>
               </div>
             </div>
