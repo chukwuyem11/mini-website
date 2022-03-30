@@ -1920,7 +1920,7 @@ flexDirection: ["column","row","row","row"],
             >
               <div
                 css={mq({
-                  width: 400,
+                  width: ["85vw",400,400,400],
 
                   marginTop: [30,60,60,60],
                   backgroundColor: "#fff",
@@ -2006,7 +2006,7 @@ flexDirection: ["column","row","row","row"],
 })}></div> */}
                     <img
                       css={mq({
-                        width: 350,
+                        width: ["85%",350,350,350],
                       })}
                       src={"svg/lineseven.svg"}
                     />
