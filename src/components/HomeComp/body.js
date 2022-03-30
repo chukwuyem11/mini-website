@@ -932,7 +932,7 @@ const Body = () => {
       >
         <div
           css={mq({
-            width: "80%",
+            width: ["100%","80%","80%","80%"],
           })}
         >
           <div
@@ -1188,7 +1188,7 @@ const Body = () => {
                 <div css={mq({
                       marginTop: 20,
                       marginBottom: [50,0,0,0],
-                      display: "grid",
+                      display: ["none","grid","grid","grid"],
                      
                       
                       width: [400,700,700,700],
@@ -1401,6 +1401,231 @@ const Body = () => {
                     </div>
                   </div>
 
+                  
+
+                  </div>
+                  <div css={mq({
+                      marginTop: 20,
+                      marginBottom: [50,0,0,0],
+                      display: ["block","none","none","none"],
+                   
+                  })}>
+                    <div css={mq({
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: 15
+                    })}>
+ <div
+                    css={mq({
+                      backgroundColor: "#161328",
+                      borderRadius: 10,
+                      padding: 20,
+                      width: 200
+                     
+                      
+                    })}
+                  >
+                    <div>
+                      <img src={"svg/green.svg"} />
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: [20,22,22,22],
+                        fontWeight: "bold",
+                        color: "#fff",
+                      })}
+                    >
+                      <p>Unlimited Links.</p>
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: 14,
+
+                        color: "#fff",
+                      })}
+                    >
+                      <p>
+                        Link to everywhere. Add an unlimited number of links to
+                        your website.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    css={mq({
+                      backgroundColor: "#161328",
+                      borderRadius: 10,
+                      padding: 20,
+                      width: 200
+                    })}
+                  >
+                    <div>
+                      <img src={"svg/blue.svg"} />
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: [20,22,22,22],
+                        fontWeight: "bold",
+                        color: "#fff",
+                      })}
+                    >
+                      <p>Social Icons.</p>
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: 14,
+
+                        color: "#fff",
+                      })}
+                    >
+                      <p>
+                        Easily link your all social media accounts. Let people
+                        easily connect with you.
+                      </p>
+                    </div>
+                  </div></div>
+                  <div css={mq({
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: 15
+                    })}>
+                  <div
+                    css={mq({
+                      backgroundColor: "#161328",
+                      borderRadius: 10,
+                      padding: 20,
+                   width: 200
+                    })}
+                  >
+                    <div>
+                      <img src={"svg/purple.svg"} />
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: [20,22,22,22],
+                        fontWeight: "bold",
+                        color: "#fff",
+                      })}
+                    >
+                      <p>Logo/Personal Picture.</p>
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: 14,
+
+                        color: "#fff",
+                      })}
+                    >
+                      <p>
+                        Easily upload your brand identity or personal picture to
+                        your mini-website.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    css={mq({
+                      backgroundColor: "#161328",
+                      borderRadius: 10,
+                      padding: 20,
+                      width: 200
+                    })}
+                  >
+                    <div>
+                      <img src={"svg/yellow.svg"} />
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: [20,22,22,22],
+                        fontWeight: "bold",
+                        color: "#fff",
+                      })}
+                    >
+                      <p>Contact Form.</p>
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: 14,
+
+                        color: "#fff",
+                      })}
+                    >
+                      <p>
+                        Let individuals easily fill a form to reach to you or
+                        your business. You get alerted instantly.
+                      </p>
+                    </div>
+                  </div> </div>
+                  <div css={mq({
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: 15
+                    })}>
+                  <div
+                    css={mq({
+                      backgroundColor: "#161328",
+                      borderRadius: 10,
+                      padding: 20,
+                      width: 200
+                    })}
+                  >
+                    <div>
+                      <img src={"svg/red.svg"} />
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: [20,22,22,22],
+                        fontWeight: "bold",
+                        color: "#fff",
+                      })}
+                    >
+                      <p>SEO.</p>
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: 14,
+
+                        color: "#fff",
+                      })}
+                    >
+                      <p>
+                        Get found easily on Google or other search engines with
+                        Search Engine Optimization.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    css={mq({
+                      backgroundColor: "#161328",
+                      borderRadius: 10,
+                      padding: 20,
+                      width: 200
+                      
+                    })}
+                  >
+                    <div>
+                      <img src={"svg/orange.svg"} />
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: [20,22,22,22],
+                        fontWeight: "bold",
+                        color: "#fff",
+                      })}
+                    >
+                      <p>Meta Tags Editor.</p>
+                    </div>
+                    <div
+                      css={mq({
+                        fontSize: 14,
+
+                        color: "#fff",
+                      })}
+                    >
+                      <p>
+                        Easily add Facebook Pixel, Google Analytics, Facebook
+                        Verification codes to your website.
+                      </p>
+                    </div>
+                  </div></div>
                   </div>
               </div>
             </div>
