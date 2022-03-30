@@ -145,7 +145,7 @@ const Body = () => {
           display: "flex",
           justifyContent: "center",
 
-          marginTop: 150,
+          marginTop: [150,150,150,180],
         })}
       >
         <div
@@ -921,7 +921,7 @@ const Body = () => {
       </div>
       <div
         css={mq({
-          marginTop: [170,140,140,140],
+          marginTop: [170,150,150,150],
           backgroundColor: "#1f1b39",
           height: ["",700,700,700],
           display: "flex",
@@ -1127,6 +1127,7 @@ const Body = () => {
                           color: "#fff",
                           marginRight: 10,
                           marginTop: -4,
+                          display: ["none", "block", "block", "block"]
                         })}
                       >
                         SEE MORE
@@ -1190,7 +1191,7 @@ const Body = () => {
                       display: "grid",
                      
                       
-                      width: [450,700,700,700],
+                      width: [400,700,700,700],
   height: [800,700,700,700],
                       gridTemplateColumns: ["1fr 1fr","1fr 1fr  1fr","1fr 1fr  1fr","1fr 1fr  1fr"],
     gridTemplateRows: [" 1fr 1fr","1fr 1fr  1fr","1fr 1fr  1fr","1fr 1fr  1fr"],
@@ -1213,7 +1214,7 @@ const Body = () => {
                     </div>
                     <div
                       css={mq({
-                        fontSize: 22,
+                        fontSize: [20,22,22,22],
                         fontWeight: "bold",
                         color: "#fff",
                       })}
@@ -1246,7 +1247,7 @@ const Body = () => {
                     </div>
                     <div
                       css={mq({
-                        fontSize: 22,
+                        fontSize: [20,22,22,22],
                         fontWeight: "bold",
                         color: "#fff",
                       })}
@@ -1279,7 +1280,7 @@ const Body = () => {
                     </div>
                     <div
                       css={mq({
-                        fontSize: 22,
+                        fontSize: [20,22,22,22],
                         fontWeight: "bold",
                         color: "#fff",
                       })}
@@ -1312,7 +1313,7 @@ const Body = () => {
                     </div>
                     <div
                       css={mq({
-                        fontSize: 22,
+                        fontSize: [20,22,22,22],
                         fontWeight: "bold",
                         color: "#fff",
                       })}
@@ -1345,7 +1346,7 @@ const Body = () => {
                     </div>
                     <div
                       css={mq({
-                        fontSize: 22,
+                        fontSize: [20,22,22,22],
                         fontWeight: "bold",
                         color: "#fff",
                       })}
@@ -1379,7 +1380,7 @@ const Body = () => {
                     </div>
                     <div
                       css={mq({
-                        fontSize: 22,
+                        fontSize: [20,22,22,22],
                         fontWeight: "bold",
                         color: "#fff",
                       })}
@@ -1446,7 +1447,7 @@ const Body = () => {
       <div>
         <div
           css={mq({
-            marginTop: 150,
+            marginTop: [170,170,170,170],
             display: "flex",
             justifyContent: "center",
           })}
@@ -1628,7 +1629,7 @@ const Body = () => {
       </div>
       <div
         css={mq({
-          marginTop: [170,90,90,90],
+          marginTop: [170,110,110,110],
           padding: ["0px 20px", 0,0,0],
           background: "linear-gradient(180deg, #4E4885 0%, #1F1B39 100%)",
           height: 500,
