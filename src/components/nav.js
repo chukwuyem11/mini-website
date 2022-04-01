@@ -3,6 +3,7 @@ import { motion, AnimatePresence  } from "framer-motion";
 
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
+import { signIn, signOut, useSession } from "next-auth/client"
 
 const breakpoints = [576, 768, 992, 1200];
 const query = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
@@ -11,21 +12,26 @@ import { BiMenuAltRight } from "react-icons/bi";
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 const Nav = () =>{
+    const [session, loading] = useSession()
+    console.log(session)
     const [modalopen, setModalopen] = useState(false)
 
     return(
         
             <div css={mq({
                 display: "flex",
-                paddingLeft: 30,
-                paddingRight: 30,
+                paddingLeft: [10,30,30,30],
+                paddingRight: [10,30,30,30],
                 paddingTop: 20,
                 alignItems: "center",
             })}>
                 <div css={mq({
-                    flex: "20%"
+                    flex: "20%",
+                    
                 })}>
-                <img src="donceptlogo.png"/>
+                <img css={mq({
+                    width: [150,200,200,200]
+                })} src="donceptlogo.png"/>
                 </div>
                 
 <div css={mq({
@@ -121,12 +127,29 @@ const Nav = () =>{
                    alignItems: "center",
                    justifyContent: "right",
                })}>
-                   <div css={mq({
+                   {!session && (
+        <>
+         <div css={mq({
                     color: "#fff",
                     marginRight: 50,
                     fontSize: 20,
-                })}>
+                })} onClick={() => signIn()}>
                    Login </div>
+          
+        </>
+      )}
+      {session && (
+        <>
+         <div css={mq({
+                    color: "#fff",
+                    marginRight: 50,
+                    fontSize: 20,
+                })} onClick={() => signOut()}>
+                   Logout </div>
+          
+        </>
+      )}
+                   
                    <div>
                        <button css={mq({
                            fontSize: 18,

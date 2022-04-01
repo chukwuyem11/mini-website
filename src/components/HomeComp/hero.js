@@ -2,7 +2,6 @@ import React from "react";
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
 import Nav from "../nav";
-
 const breakpoints = [576, 768, 992, 1200];
 const query = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 
@@ -10,6 +9,7 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 
 const Hero = () => {
+    
   return (
     <div css={mq({
         backgroundSize: "cover",
@@ -23,15 +23,15 @@ const Hero = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            height: 500
+            height: ["",500,500,500]
 
         })}>
         <div  >
             <div css={mq({
                 color: "#fff",
                 textAlign: "center",
-                marginTop: 100,
-                fontSize: [45,65,65,65],
+                marginTop: [50,100,100,100],
+                fontSize: [30,65,65,65],
                 fontWeight: "bold"
             })}>
             Get a mini website</div>
@@ -44,8 +44,8 @@ const Hero = () => {
             <div css={mq({
                 color: "#fff",
                 textAlign: "center",
-                fontSize: [22,25,25,25],
-                width: ["80%","40vw","40vw","40vw"],
+                fontSize: [20,25,25,25],
+                width: ["100%","40vw","40vw","40vw"],
            
                
             })}>
@@ -79,7 +79,7 @@ const Hero = () => {
             outline: "none",
                 border: "none",
                 fontSize: 18,
-        })}>search</button>
+        })}  >search</button>
     </div>
    
         </div>
@@ -92,9 +92,10 @@ const Hero = () => {
         <div css={mq({
                 color: "#fff",
                 textAlign: "center",
-                fontSize: 20,
+                fontSize: [16,20,20,20],
+                marginBottom: [20,"","",""],
                 width: ["100%","50vw","50vw","50vw"],
-               
+               padding: ["0px 10px", 0,0,0]
                
             })}>
            Already have a domain name. Transfer domain <span css={mq({

@@ -101,7 +101,8 @@ const Body = () => {
             css={mq({
               textAlign: "center",
               fontWeight: "bold",
-              fontSize: [35,45,45,45],
+              fontSize: [30,45,45,45],
+              marginTop: [15,"","",""],
             })}
           >
             {" "}
@@ -130,14 +131,15 @@ const Body = () => {
           >
             <div
               css={mq({
-                width: ["80vw","40vw","40vw","40vw"],
+                width: ["100%","40vw","40vw","40vw"],
+                padding:[ "0px 10px", "", "", ""],
                 marginTop: 20,
               })}
             >
               <div
                 css={mq({
                   textAlign: "center",
-                  fontSize: [22,25,25,25],
+                  fontSize: [20,25,25,25],
                 })}
               >
                 Bye to long and tiring website links or name. Use your business
@@ -208,7 +210,8 @@ const Body = () => {
             flexDirection: ["column","row","row","row"],
             marginTop: [50,0,0,0],
             justifyContent: "space-between",
-            width: "80vw",
+            padding:[ "0px 10px", "", "", ""],
+            width: ["100%","80vw","80vw","80vw"],
           })}
         >
           <div
@@ -248,7 +251,7 @@ const Body = () => {
             <div
               css={mq({
                 marginTop: 20,
-                fontSize: [22,25,25,25],
+                fontSize: [20,25,25,25],
               })}
             >
               Build trust with your audience & customers by getting a
@@ -275,7 +278,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: [20,22,22,22],
+                      fontSize: [18,22,22,22],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -297,7 +300,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: [20,22,22,22],
+                      fontSize: [18,22,22,22],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -320,7 +323,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: [22,25,25,25],
+                      fontSize: [18,25,25,25],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -343,7 +346,7 @@ const Body = () => {
                   </div>
                   <div
                     css={mq({
-                      fontSize: [22,25,25,25],
+                      fontSize: [18,25,25,25],
                       fontWeight: "bold",
                       marginLeft: 10,
                     })}
@@ -356,7 +359,7 @@ const Body = () => {
             <div>
               <div
                 css={mq({
-                  fontSize: [22,25,25,25],
+                  fontSize: [20,25,25,25],
                   fontWeight: "bold",
                   color: "#3531D4",
                   textDecoration: "underline",
@@ -412,8 +415,8 @@ const Body = () => {
         backgroundColor: "#fafafa",
         // borderRadius: "40% 40% 0px 0px",
         display: ["block","none","none","none"],
-        paddingLeft: 20,
-        paddingRight: 20
+        paddingLeft: 10,
+        paddingRight: 10
       })}><div css={mq({
         marginTop: 50,
         display: "flex",
@@ -980,7 +983,7 @@ const Body = () => {
           height: ["",700,700,700],
           display: "flex",
           justifyContent: ["left","center","center","center"],
-          padding:["0px 20px",0,0,0],
+          
           alignItems: "center",
         })}
       >
@@ -999,6 +1002,7 @@ const Body = () => {
               css={mq({
                 flex: "30%",
                 display: ["none","block","block","block"],
+                
               })}
             >
               <img
@@ -1052,6 +1056,7 @@ const Body = () => {
                     fontSize: [30,40,40,40],
                     fontWeight: "bold",
                     color: "#fff",
+                    padding:["0px 10px",0,0,0],
                   })}
                 >
                   Choose preferred templates.
@@ -1062,6 +1067,7 @@ const Body = () => {
                     display: "flex",
                     justifyContent: "space-between",
                     marginTop: 25,
+                    padding:["0px 10px",0,0,0],
                   })}
                 >
                   <div
@@ -1553,8 +1559,8 @@ const Body = () => {
                       display: "flex",
                       
                       position: "absolute" ,
-                      left: "50%",
-                      right: "50%",
+                      left: -110,
+                      
                       top: 250
                     })}>
                     <div css={mq({
@@ -1635,7 +1641,7 @@ const Body = () => {
               display: "flex",
               justifyContent: "space-between",
               flexDirection: ["column-reverse", "row","row","row"],
-              padding: ["0px 20px",0,0,0],
+              padding: ["0px 10px",0,0,0],
               width: ["100%","80%","80%","80%"],
             })}
           >
@@ -1659,7 +1665,7 @@ const Body = () => {
               </div>
               <div
                 css={mq({
-                  fontSize: [22,25,25,25],
+                  fontSize: [20,25,25,25],
                   fontWeight: 400,
                 })}
               >
@@ -1676,10 +1682,10 @@ const Body = () => {
 
                   })}
                 >
-                  <img css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
+                  <img css={mq({width: [20,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: [25,30,30,30],
+                      fontSize: [20,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1694,10 +1700,10 @@ const Body = () => {
                     marginTop: 20,
                   })}
                 >
-                  <img  css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
+                  <img  css={mq({width: [20,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: [25,30,30,30],
+                      fontSize: [20,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1712,10 +1718,10 @@ const Body = () => {
                     marginTop: 20,
                   })}
                 >
-                  <img  css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
+                  <img  css={mq({width: [20,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: [25,30,30,30],
+                      fontSize: [20,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1731,10 +1737,10 @@ const Body = () => {
                   
                   })}
                 >
-                  <img  css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />{" "}
+                  <img  css={mq({width: [20,35,35,35]})} src={"svg/box.svg"} />{" "}
                   <div
                     css={mq({
-                      fontSize: [25,30,30,30],
+                      fontSize: [20,30,30,30],
                       fontWeight: "bold",
                       marginLeft: 20,
                     })}
@@ -1808,7 +1814,7 @@ const Body = () => {
       <div
         css={mq({
           marginTop: [170,110,110,110],
-          padding: ["0px 20px", 0,0,0],
+          padding: ["0px 10px", 0,0,0],
           background: "linear-gradient(180deg, #4E4885 0%, #1F1B39 100%)",
           height: 500,
         })}
@@ -1845,7 +1851,7 @@ flexDirection: ["column","row","row","row"],
               </div>
               <div
                 css={mq({
-                  fontSize: [22,25,25,25],
+                  fontSize: [20,25,25,25],
                   color: "#fff",
                 })}
               >
@@ -1976,13 +1982,13 @@ flexDirection: ["column","row","row","row"],
                       css={mq({
                         display: "flex",
 
-                        marginTop: 30,
+                        marginTop: [20,30,30,30],
                       })}
                     >
-                      <img css={mq({width: [25,35,35,35]})} src={"svg/box.svg"} />
+                      <img css={mq({width: [20,35,35,35]})} src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: [20,22,22,22],
+                          fontSize: [18,22,22,22],
                           fontWeight: 600,
                           marginLeft: 20,
                         })}
@@ -1995,13 +2001,13 @@ flexDirection: ["column","row","row","row"],
                       css={mq({
                         display: "flex",
 
-                        marginTop: 30,
+                        marginTop: [20,30,30,30],
                       })}
                     >
-                      <img css={mq({width: [25,35,35,35]})}  src={"svg/box.svg"} />
+                      <img css={mq({width: [20,35,35,35]})}  src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: [20,22,22,22],
+                          fontSize: [18,22,22,22],
                           fontWeight: 600,
                           marginLeft: 20,
                         })}
@@ -2014,15 +2020,15 @@ flexDirection: ["column","row","row","row"],
                       css={mq({
                         display: "flex",
 
-                        marginTop: 30,
+                        marginTop: [20,30,30,30],
                       })}
                     >
-                      <img css={mq({width: [25,35,35,35]})}  src={"svg/box.svg"} />
+                      <img css={mq({width: [20,35,35,35]})}  src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: [20,22,22,22],
+                          fontSize: [18,22,22,22],
                           fontWeight: 600,
-                          marginLeft: 20,
+                          marginLeft: [20,20,20,20],
                         })}
                       >
                         5 Domain links
@@ -2033,13 +2039,13 @@ flexDirection: ["column","row","row","row"],
                       css={mq({
                         display: "flex",
 
-                        marginTop: 30,
+                        marginTop: [20,30,30,30],
                       })}
                     >
-                      <img css={mq({width: [25,35,35,35]})}  src={"svg/box.svg"} />
+                      <img css={mq({width: [20,35,35,35]})}  src={"svg/box.svg"} />
                       <div
                         css={mq({
-                          fontSize: [20,22,22,22],
+                          fontSize: [18,22,22,22],
                           fontWeight: 600,
                           marginLeft: 20,
                         })}
@@ -2068,7 +2074,7 @@ flexDirection: ["column","row","row","row"],
                     >
                       <div
                         css={mq({
-                          fontSize: [20,22,22,22],
+                          fontSize: [18,22,22,22],
                           fontWeight: 600,
                           color: "#fff",
                         })}
@@ -2092,7 +2098,7 @@ flexDirection: ["column","row","row","row"],
       </div>
       <div
         css={mq({
-          marginTop: [450,350,350,350],
+          marginTop: [500,350,350,350],
           backgroundColor: "#202020",
           paddingTop: 50,
         })}
@@ -2100,7 +2106,7 @@ flexDirection: ["column","row","row","row"],
         <div>
           <div
             css={mq({
-              fontSize: [55,65,65,65],
+              fontSize: [30,65,65,65],
               fontWeight: "bold",
               color: "#fff",
 
@@ -2111,7 +2117,7 @@ flexDirection: ["column","row","row","row"],
           </div>
           <div
             css={mq({
-              fontSize: [22,25,25,25],
+              fontSize: [20,25,25,25],
 
               color: "#fff",
               textAlign: "center",
@@ -2181,7 +2187,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [22,25,25,25],
+                fontSize: [20,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -2189,7 +2195,7 @@ flexDirection: ["column","row","row","row"],
             </div>
             <div
               css={mq({
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 color: "#E3FDFF",
                 marginTop: 20,
               })}
@@ -2199,7 +2205,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 fontWeight: "bold",
-                fontSize: [22,25,25,25],
+                fontSize: [20,25,25,25],
                 color: "#fff",
                 marginTop: 20,
               })}
@@ -2217,7 +2223,7 @@ flexDirection: ["column","row","row","row"],
                   marginTop: 20,
                   borderRadius: 5,
                   fontFamily: "Tisa Sans Pro",
-                  fontSize: 18,
+                  fontSize: 16,
                   backgroundColor: "#363636",
 
                   ":focus": {
@@ -2268,7 +2274,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [22,25,25,25],
+                fontSize: [20,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -2278,7 +2284,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2287,7 +2293,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2296,7 +2302,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2305,7 +2311,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2318,7 +2324,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [22,25,25,25],
+                fontSize: [20,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -2327,7 +2333,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2336,7 +2342,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2345,7 +2351,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2354,7 +2360,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2367,7 +2373,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [22,25,25,25],
+                fontSize: [20,25,25,25],
                 fontWeight: 600,
               })}
             >
@@ -2376,7 +2382,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2385,7 +2391,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2394,7 +2400,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2403,7 +2409,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2412,7 +2418,7 @@ flexDirection: ["column","row","row","row"],
             <div
               css={mq({
                 color: "#fff",
-                fontSize: [20,22,22,22],
+                fontSize: [18,22,22,22],
                 marginTop: 20,
               })}
             >
@@ -2432,11 +2438,11 @@ flexDirection: ["column","row","row","row"],
             css={mq({
               color: "#fff",
 
-              fontSize: 18,
+              fontSize: 16,
             })}
           >
             © DONCEPT TECH LIMITED
-          </div>{" "}
+          </div>
         </div>
       </div>
     </div>
