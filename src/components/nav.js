@@ -3,7 +3,7 @@ import { motion, AnimatePresence  } from "framer-motion";
 
 import { css, jsx } from "@emotion/react";
 import facepaint from "facepaint";
-import { signIn, signOut, useSession } from "next-auth/client"
+// import { signIn, signOut, useSession } from "next-auth/client"
 
 const breakpoints = [576, 768, 992, 1200];
 const query = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
@@ -127,7 +127,7 @@ const Nav = () =>{
                    alignItems: "center",
                    justifyContent: "right",
                })}>
-                   {!session && (
+                   {/* {!session && (
         <>
          <div css={mq({
                     color: "#fff",
@@ -148,8 +148,13 @@ const Nav = () =>{
                    Logout </div>
           
         </>
-      )}
-                   
+      )} */}
+                   <div css={mq({
+                    color: "#fff",
+                    marginRight: 50,
+                    fontSize: 20,
+                })} >
+                   Login </div>
                    <div>
                        <button css={mq({
                            fontSize: 18,
