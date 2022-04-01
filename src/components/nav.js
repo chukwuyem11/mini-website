@@ -12,7 +12,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 const Nav = () =>{
-    const [session, loading] = useSession()
+    // const [session, loading] = useSession()
     console.log(session)
     const [modalopen, setModalopen] = useState(false)
 
@@ -149,12 +149,14 @@ const Nav = () =>{
           
         </>
       )} */}
-                   <div css={mq({
+
+<div css={mq({
                     color: "#fff",
                     marginRight: 50,
                     fontSize: 20,
                 })} >
                    Login </div>
+                   
                    <div>
                        <button css={mq({
                            fontSize: 18,
