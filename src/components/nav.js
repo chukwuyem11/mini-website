@@ -13,7 +13,7 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 const Nav = () =>{
     // const [session, loading] = useSession()
-    console.log(session)
+    // console.log(session)
     const [modalopen, setModalopen] = useState(false)
 
     return(
