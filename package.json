@@ -11,6 +11,11 @@
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.8.1",
+    "@prisma/client": "^2.30.3",
+    "axios": "^0.26.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
     "express": "^4.17.3",
     "express-subdomain": "^1.0.5",
     "facepaint": "^1.2.1",
@@ -21,10 +26,14 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
+    "react-query": "^3.34.19",
+    "react-swipeable": "^6.2.1",
+    "url": "^0.11.0",
     "vhost": "^3.0.2"
   },
   "devDependencies": {
     "eslint": "8.10.0",
-    "eslint-config-next": "12.1.0"
+    "eslint-config-next": "12.1.0",
+    "prisma": "^3.11.1"
   }
 }
