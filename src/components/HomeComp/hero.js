@@ -12,9 +12,12 @@ const Hero = () => {
     
   return (
     <div css={mq({
+        backgroundPosition: "top center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundImage: "url('herobg.jpg'), linear-gradient(0deg, rgba(31, 27, 57, 0.75), rgba(31, 27, 57, 0.75))",
         backgroundBlendMode: "overlay"
+
        
         
     })}>

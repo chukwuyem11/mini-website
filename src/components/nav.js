@@ -81,7 +81,7 @@ const Nav = () =>{
                     <AnimatePresence>
                     {modalopen &&
                     
-                    <motion.div initial={{opacity: 0, x: 20}} animate={{opacity: 1, x: 0}} exit={{opacity: 0,  x: 20}} css={mq({
+                    <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}} exit={{opacity: 0,  y: 20}} css={mq({
                         position: "relative"
                     })}>
                         <div css={mq({
@@ -149,13 +149,13 @@ const Nav = () =>{
           
         </>
       )} */}
-
-<div css={mq({
+      <div css={mq({
                     color: "#fff",
                     marginRight: 50,
                     fontSize: 20,
                 })} >
                    Login </div>
+      
                    
                    <div>
                        <button css={mq({

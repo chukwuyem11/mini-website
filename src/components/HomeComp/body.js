@@ -17,7 +17,29 @@ const Body = () => {
   const [tab1, setTab1] = React.useState("a");
   const [position, positionSet] = React.useState(0);
 
-  
+  const next = () => {
+    if (tab == "a"){
+      setTab("b")
+    }
+    if (tab == "b"){
+      setTab("c")
+    }
+    if (tab == "c"){
+      setTab("a")
+    }
+  }
+
+  const prev = () => {
+    if (tab == "a"){
+      setTab("c")
+    }
+    if (tab == "b"){
+      setTab("a")
+    }
+    if (tab == "c"){
+      setTab("b")
+    }
+  }
   const right = () => {
     if (position < features.length - 1) {
       positionSet(position + 1);
@@ -440,55 +462,36 @@ const Body = () => {
         domain links.{" "}
       </span>
     </div></div>
-    
-        <div css={mq({
+    <div css={mq({
        marginTop: 40,
         display: "flex",
         justifyContent: "space-between",
-       
+       alignItems: "center"
       })}>
-
+<div css={mq({fontSize: 30})} onClick={() => prev()}>
+< BsArrowLeftCircle color="#c4c4c4"/></div>
+<div css={mq({
+       display: tab == "a" ? "block" :"none",
+        fontSize: 20,
+        color: "#3531D4",
+      })}  >Personalise your stores</div>
       <div css={mq({
-       paddingBottom:5,
-       paddingTop: 5,
-       paddingRight: 10,
-       paddingLeft: 10,
-        border: "solid",
-        borderWidth: 1,
-        borderColor: tab == "a" ? "#fff" :"#c4c4c4",
-        borderRadius: 50,
-        fontSize: 16,
-        backgroundColor: tab == "a" ? "#3531D4" : "",
-        color: tab == "a" ? "#fff" : ""
-      })}  onClick={() => setTab("a")}>Personalise your stores</div>
+        
+        display: tab == "b" ? "block" :"none",
+        color: "#3531D4",
+       
+        fontSize: 20,
+        
+        
+      })}  >Shorten Links</div>
       <div css={mq({
-        paddingBottom:5,
-        paddingTop: 5,
-        paddingRight: 10,
-        paddingLeft: 10,
-        border: "solid",
-        borderWidth: 1,
-        borderColor: tab == "b" ? "#fff" :"#c4c4c4",
-        borderRadius: 50,
-        fontSize: 16,
-        backgroundColor: tab == "b" ? "#3531D4" : "",
-        color: tab == "b" ? "#fff" : ""
-      })}  onClick={() => setTab("b")}>Shorten Links</div>
-      <div css={mq({
-        paddingBottom:5,
-        paddingTop: 5,
-        paddingRight: 10,
-        paddingLeft: 10,
-        border: "solid",
-        borderWidth: 1,
-        borderColor: tab == "c" ? "#fff" :"#c4c4c4",
-        borderRadius: 50,
-        fontSize: 16,
-        backgroundColor: tab == "c" ? "#3531D4" : "",
-        color: tab == "c" ? "#fff" : ""
-      })}  onClick={() => setTab("c")}>Social Media Handles</div>
-
+         display: tab == "c" ? "block" :"none",
+        fontSize: 20,
+        color: "#3531D4",
+      })}  >Social Media Handles</div> <div css={mq({fontSize: 30})} onClick={() => next()}><BsArrowRightCircle color="#c4c4c4" /></div> 
       </div>
+    
+        
       <div
             css={mq({
               
@@ -620,7 +623,7 @@ const Body = () => {
                   })}>
                   <img
                     css={mq({
-                      width: 400,
+                      width: ["90vw",400,400,400],
                      
                       
                     })}
@@ -641,7 +644,7 @@ const Body = () => {
                   })}>
                   <img
                     css={mq({
-                      width: 400,
+                      width: ["90vw",400,400,400],
                      
                     })}
                     src={"pics/whatsapp.png"}
@@ -660,7 +663,7 @@ const Body = () => {
                   })}>
                   <img
                     css={mq({
-                      width: 400,
+                      width: ["90vw",400,400,400],
                      
                     })}
                     src={"pics/socialmedia.png"}
@@ -2430,14 +2433,14 @@ flexDirection: ["column","row","row","row"],
           css={mq({
             marginTop: 50,
             display: "flex",
-            paddingLeft: 150,
+            paddingLeft: [20,150,150,150],
             paddingBottom: 20,
           })}
         >
           <div
             css={mq({
               color: "#fff",
-
+textAlign: "center",
               fontSize: 16,
             })}
           >
